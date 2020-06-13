@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD candidate at the Computer Vision Group at the Chair for Computer Aided Medical Procedures, Technical University of Munich and a Doktorand at Siemens AG. My work research focuses on the development on scalable object detection, pose estimation, and domain adaptation. 
+I am a PhD candidate at the Computer Vision Group at the Chair for Computer Aided Medical Procedures, Technical University of Munich and a Doktorand at Siemens AG. My work research focuses on the development on scalable object detection, pose estimation, and domain adaptation. Reviewer for CVPR, ICCV, BMVC, WACV, ICRA, IROS, RA-L, CVIU. 
 
 News
 ======
