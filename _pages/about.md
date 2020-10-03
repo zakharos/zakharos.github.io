@@ -12,6 +12,8 @@ I am a PhD candidate at the Computer Vision Group at the Chair for Computer Aide
 
 News
 ======
-- New work on 3D autolabeling with differentiable rendering is accepted for oral presentation at CVPR 2020!
-- New paper 'DeceptionNet: Network-Driven Domain Randomization' accepted to ICCV 2019!
-- Our new dense 6D pose object detector "DPOD" got accepted to ICCV 2019!
+- Released the [code](https://github.com/TRI-ML/sdflabel) for our CVPR 2020 autolabeling pipeline!
+- Released the [full HomebrewedDB dataset](http://campar.in.tum.de/personal/ilic/homebreweddb/index.html) used in the [BOP challenge](https://bop.felk.cvut.cz/datasets/)!
+- New work on [9D autolabeling with differentiable rendering](https://arxiv.org/pdf/1911.11288.pdf) is accepted for oral presentation at CVPR 2020!
+- New paper ["DeceptionNet: Network-Driven Domain Randomization"](https://arxiv.org/pdf/1904.02750.pdf) accepted to ICCV 2019!
+- Our new dense 6D pose object detector [DPOD](https://arxiv.org/pdf/1902.11020.pdf) got accepted to ICCV 2019!
