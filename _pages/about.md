@@ -12,7 +12,7 @@ I am a machine learning research scientist at [Toyota Research Institute](https:
 
 News
 ======
-- `Nov.2020` Defended my PhD! (Learning to Estimate 3D Object Pose from Synthetic Data)
+- `Nov.2020` Defended my PhD thesis! (Learning to Estimate 3D Object Pose from Synthetic Data)
 - `Aug.2020` [DPOD](https://arxiv.org/pdf/1902.11020.pdf) was awarded as the best method on the LM dataset at [the BOP Challenge 2020](http://cmp.felk.cvut.cz/sixd/workshop_2020/#challenge) at ECCV'20. 
 - `Oct.2020` Released the [code](https://github.com/TRI-ML/sdflabel) for our CVPR 2020 autolabeling pipeline!
 - `Oct.2020` Released the [code](https://github.com/zakharos/DPOD) for our ICCV 2019 6DoF object detector!
