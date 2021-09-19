@@ -1,18 +1,71 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Planche":
+  - firstname: ["Benjamin", "B.", "B. P.", "Benjamin Planche"]
+    url: https://planche.me/
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Kehl":
+  - firstname: ["Wadim", "W.", "W. K.", "Wadim Kehl"]
+    url: https://wadimkehl.github.io/
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Gaidon":
+  - firstname: ["Adrien", "A."]
+    url: https://adriengaidon.com/
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Ilic":
+  - firstname: ["Slobodan", "S."]
+    url: http://campar.in.tum.de/Main/SlobodanIlic
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Wu":
+  - firstname: ["Ziyan", "Z."]
+    url: http://wuziyan.com/
+
+"Navab":
+  - firstname: ["Nassir", "N."]
+    url: http://campar.in.tum.de/Main/NassirNavabCv
+  
+"Kosch":
+  - firstname: ["Harald", "H."]
+    url: https://scholar.google.com/citations?hl=en&user=WnWkNTsAAAAJ
+
+"Hutter":
+  - firstname: ["Andreas", "A."]
+    url: https://www.researchgate.net/profile/Andreas-Hutter-4
+
+"Albarqouni":
+  - firstname: ["Shadi", "A."]
+    url: https://albarqouni.github.io/
+
+"Bui":
+  - firstname: ["Mai", "M."]
+    url: http://campar.in.tum.de/Main/MaiBui
+
+"Shugurov":
+  - firstname: ["Ivan", "I."]
+    url: http://campar.in.tum.de/Main/IvanShugurov
+
+"Pavlov":
+  - firstname: ["Ivan", "I."]
+    url: https://www.researchgate.net/profile/Ivan-Pavlov-13
+
+"Kaskman":
+  - firstname: ["Roman", "R."]
+    url: https://www.researchgate.net/profile/Roman-Kaskman
+
+"Sun":
+  - firstname: ["Shanhui", "S."]
+    url: https://sites.google.com/site/shanhuisun
+
+"Ma":
+  - firstname: ["Kai", "K."]
+    url: https://scholar.google.com/citations?user=FSSXeyAAAAAJ
+
+"Chen":
+  - firstname: ["Terrence", "T."]
+    url: https://scholar.google.com/citations?user=S2BT6ogAAAAJ
+
+"Kluckner":
+  - firstname: ["Stefan", "S."]
+    url: https://scholar.google.com/citations?user=YA5vGB8AAAAJ&hl=en
+
+"Lehmann":
+- firstname: ["Oliver", "O."]
+  url: https://scholar.google.com/citations?user=dkK56rkAAAAJ
