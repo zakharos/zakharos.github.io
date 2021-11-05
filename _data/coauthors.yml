@@ -69,3 +69,31 @@
 "Lehmann":
 - firstname: ["Oliver", "O."]
   url: https://scholar.google.com/citations?user=dkK56rkAAAAJ
+
+"Ambrus":
+- firstname: ["Andrei", "A."]
+  url: https://scholar.google.se/citations?user=2xjjS3oAAAAJ
+
+"Park":
+- firstname: ["Dennis", "D."]
+  url: https://scholar.google.com/citations?user=_UJsz3AAAAAJ
+
+"Guizilini":
+- firstname: ["Vitor", "V."]
+  url: https://scholar.google.com.br/citations?user=UH9tP6QAAAAJ
+
+"Durand":
+- firstname: ["Fredo", "F."]
+  url: http://people.csail.mit.edu/fredo/
+
+"Tenenbaum":
+- firstname: ["Joshua", "J."]
+  url: http://web.mit.edu/cocosci/josh.html
+
+"Sitzmann":
+- firstname: ["Vincent", "V."]
+  url: https://vsitzmann.github.io/
+
+"Jiajun":
+- firstname: ["Wu", "W."]
+  url: https://jiajunwu.com/
