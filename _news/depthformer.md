@@ -1,7 +1,8 @@
 ---
 layout: post
-date: 2022-03-03
+title: A long announcement with details
+date: 2022-03-01
 inline: true
 ---
 
-Our paper called [Multi-Frame Self-Supervised Depth with Transformers](https://arxiv.org/abs/2204.07616) is accepted to CVPR'22!
+[Depthformer](https://arxiv.org/pdf/2204.07616.pdf) accepted to CVPR'22!

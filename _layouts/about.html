@@ -17,27 +17,19 @@ layout: default
             {%- if page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
 
-  <article>
-    {% if page.profile %}
-    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-      {% if page.profile.image %}
-        <img class="img-fluid z-depth-1 rounded" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}">
-        <div class="navbar-brand social" style="display: flex; justify-content: space-around">
-          {% include social.html %}
-        </div>
-      {% endif %}
-      {% if page.profile.address %}
-        <div class="address">
-          {{ page.profile.address }}
-        </div>
-      {% endif %}
-    </div>
-    {% endif %}
+              {% if page.profile.image_cicular %}
+                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
+              {% else %}
+                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+              {% endif %}
 
               {% include figure.html 
               path=profile_image_path 
               class=profile_image_class
               alt=page.profile.image -%}
+              <div class="navbar-brand social" style="display: flex; justify-content: space-around">
+                {% include social.html %}
+              </div>
             {% endif -%}
             {%- if page.profile.address %}
             <div class="address">
@@ -61,19 +53,17 @@ layout: default
           {%- endif %}
           {%- if page.social %}
           <!-- Social -->
-          <div class="social">
+          <!-- <div class="social">
             <div class="contact-icons">
             {% include social.html %}
             </div>
 
-    <!-- {% if page.social %}
-    <div class="social">
-      <div class="contact-icons">
-        {% include social.html %}
-      </div>
-      <div class="contact-note">{{ site.contact_note }}</div>
-    </div>
-    {% endif %} -->
-  </article>
+            <div class="contact-note">
+              {{ site.contact_note }}
+            </div>
+            
+          </div> -->
+          {%- endif %}
+        </article>
 
 </div>
