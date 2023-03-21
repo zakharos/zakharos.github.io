@@ -1,3 +1,23 @@
+"Heppert":
+  - firstname: ["Nick", "Nick Heppert"]
+    url: https://rl.informatik.uni-freiburg.de/people/heppert
+
+"Yu":
+  - firstname: ["Hong-Xing", "Hong-Xing Yu"]
+    url: https://kovenyu.com/
+
+"Tian":
+  - firstname: ["Stephen", "Stephen Tian"]
+    url: https://s-tian.github.io/
+
+"Tewari":
+  - firstname: ["Ayush", "Ayush Tewari"]
+    url: https://ayushtewari.com/
+
+"Sharma":
+  - firstname: ["Prafull", "Prafull Sharma"]
+    url: https://prafullsharma.net/
+
 "Planche":
   - firstname: ["Benjamin", "B.", "B. P.", "Benjamin Planche"]
     url: https://planche.me/
