@@ -1,34 +1,163 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Van Hoorick":
+  - firstname: ["Basile", "Basile Van Hoorick"]
+    url: https://basile.be/about-me/
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Vondrick":
+  - firstname: ["Carl", "Carl Vondrick"]
+    url: https://www.cs.columbia.edu/~vondrick/
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Vasiljevic":
+  - firstname: ["Igor", "Igor Vasiljevic"]
+    url: https://home.ttic.edu/~ivas/
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Fang":
+  - firstname: ["Jiading", "Jiading Fang"]
+    url: https://sites.google.com/view/jiadingfang
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Tokmakov":
+  - firstname: ["Pavel", "Pavel Tokmakov"]
+    url: https://pvtokmakov.github.io/home/
 
-"Przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Heppert":
+  - firstname: ["Nick", "Nick Heppert"]
+    url: https://rl.informatik.uni-freiburg.de/people/heppert
 
-"Schrödinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Yu":
+  - firstname: ["Hong-Xing", "Hong-Xing Yu"]
+    url: https://kovenyu.com/
 
-"Lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Tian":
+  - firstname: ["Stephen", "Stephen Tian"]
+    url: https://s-tian.github.io/
 
-"Planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Tewari":
+  - firstname: ["Ayush", "Ayush Tewari"]
+    url: https://ayushtewari.com/
+
+"Sharma":
+  - firstname: ["Prafull", "Prafull Sharma"]
+    url: https://prafullsharma.net/
+
+"Planche":
+  - firstname: ["Benjamin", "B.", "B. P.", "Benjamin Planche"]
+    url: https://planche.me/
+
+"Kehl":
+  - firstname: ["Wadim", "W.", "W. K.", "Wadim Kehl"]
+    url: https://wadimkehl.github.io/
+
+"Gaidon":
+  - firstname: ["Adrien", "A."]
+    url: https://adriengaidon.com/
+
+"Ilic":
+  - firstname: ["Slobodan", "S."]
+    url: http://campar.in.tum.de/Main/SlobodanIlic
+
+"Wu":
+  - firstname: ["Ziyan", "Z."]
+    url: http://wuziyan.com/
+
+"Navab":
+  - firstname: ["Nassir", "N."]
+    url: http://campar.in.tum.de/Main/NassirNavabCv
+  
+"Kosch":
+  - firstname: ["Harald", "H."]
+    url: https://scholar.google.com/citations?hl=en&user=WnWkNTsAAAAJ
+
+"Hutter":
+  - firstname: ["Andreas", "A."]
+    url: https://www.researchgate.net/profile/Andreas-Hutter-4
+
+"Albarqouni":
+  - firstname: ["Shadi", "A."]
+    url: https://albarqouni.github.io/
+
+"Bui":
+  - firstname: ["Mai", "M."]
+    url: http://campar.in.tum.de/Main/MaiBui
+
+"Shugurov":
+  - firstname: ["Ivan", "I."]
+    url: http://campar.in.tum.de/Main/IvanShugurov
+
+"Pavlov":
+  - firstname: ["Ivan", "I."]
+    url: https://www.researchgate.net/profile/Ivan-Pavlov-13
+
+"Kaskman":
+  - firstname: ["Roman", "R."]
+    url: https://www.researchgate.net/profile/Roman-Kaskman
+
+"Sun":
+  - firstname: ["Shanhui", "S."]
+    url: https://sites.google.com/site/shanhuisun
+
+"Ma":
+  - firstname: ["Kai", "K."]
+    url: https://scholar.google.com/citations?user=FSSXeyAAAAAJ
+
+"Chen":
+  - firstname: ["Terrence", "T."]
+    url: https://scholar.google.com/citations?user=S2BT6ogAAAAJ
+  - firstname: ["Dian", "Dian Chen"]
+    url: https://www.dianchen.io/
+
+"Kluckner":
+  - firstname: ["Stefan", "S."]
+    url: https://scholar.google.com/citations?user=YA5vGB8AAAAJ&hl=en
+
+"Lehmann":
+- firstname: ["Oliver", "O."]
+  url: https://scholar.google.com/citations?user=dkK56rkAAAAJ
+
+"Ambrus":
+- firstname: ["Rares", "R."]
+  url: https://scholar.google.se/citations?user=2xjjS3oAAAAJ
+
+"Park":
+- firstname: ["Dennis", "D."]
+  url: https://scholar.google.com/citations?user=_UJsz3AAAAAJ
+
+"Guizilini":
+- firstname: ["Vitor", "V."]
+  url: https://scholar.google.com.br/citations?user=UH9tP6QAAAAJ
+
+"Durand":
+- firstname: ["Fredo", "F."]
+  url: http://people.csail.mit.edu/fredo/
+
+"Tenenbaum":
+- firstname: ["Joshua", "J."]
+  url: http://web.mit.edu/cocosci/josh.html
+
+"Sitzmann":
+- firstname: ["Vincent", "V."]
+  url: https://vsitzmann.github.io/
+
+"Wu":
+- firstname: ["Jiajun", "J."]
+  url: https://jiajunwu.com/
+- firstname: ["Rundi", "Rundi Wu"]
+  url: https://www.cs.columbia.edu/~rundi/
+- firstname: ["Ziyan", "Ziyan Wu"]
+  url: http://wuziyan.com/
+
+"Irshad":
+- firstname: ["Muhammad Zubair", "M."]
+  url: https://zubairirshad.com/
+
+"Du":
+- firstname: ["Yilun", "Yilun Du"]
+  url: https://yilundu.github.io/
+
+"Cai":
+- firstname: ["Yancheng", "Yancheng Cai"]
+  url: https://caiyancheng.github.io/academic.html
+
+"Liu":
+- firstname: ["Katherine", "K."]
+  url: https://www.thekatherineliu.com/
+- firstname: ["Ruoshi", "Ruoshi Liu"]
+  url: https://ruoshiliu.github.io/

@@ -28,6 +28,9 @@ layout: default
               class=profile_image_class
               alt=page.profile.image
               cache_bust=true -%}
+              <div class="contact-icons" style="display: flex; justify-content: space-around">
+                {% include social.html %}
+              </div>
             {% endif -%}
             {%- if page.profile.more_info %}
             <div class="more-info">
@@ -60,7 +63,7 @@ layout: default
           {%- endif %}
 
           <!-- Social -->
-          {%- if page.social %}
+          <!-- {%- if page.social %}
             <div class="social">
               <div class="contact-icons">
                 {% include social.html %}
@@ -71,7 +74,7 @@ layout: default
               </div>
 
             </div>
-          {%- endif %}
+          {%- endif %} -->
         </article>
 
 </div>
