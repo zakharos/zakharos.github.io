@@ -1,0 +1,1 @@
+window.MathJax={loader:{load:["[tex]/textmacros"]},tex:{inlineMath:[["$","$"],["\\(","\\)"]],packages:{"[+]":["textmacros"]}},svg:{fontCache:"global"}},function(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js",e.async=!0,document.head.appendChild(e)}();
