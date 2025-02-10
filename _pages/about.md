@@ -19,6 +19,4 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a Senior Research Scientist at [Toyota Research Institute](https://www.tri.global/) and a former PhD candidate at the [Chair for Computer Aided Medical Procedures, Technical University of Munich](http://campar.in.tum.de/Main/SergeyZakharov) and [Siemens AG](https://www.siemens.com/global/en.html). My research focuses on 3D scene understanding and covers such topics as neural implicit representations, generative modeling, scalable 3D object detection, and domain adaptation. 
-
-Reviewer for CVPR, ICCV, ECCV, ICRA, IROS, SIGGRAPH.
+I am a Senior Research Scientist and Team Lead at [Toyota Research Institute](https://www.tri.global/), specializing in 3D scene understanding. My research spans generative modeling, implicit neural representations, 3D object detection, domain adaptation, and self-supervised learning. I lead efforts in advancing foundational research and translating cutting-edge methods to real-world applications. I earned my PhD from the [Technical University of Munich](https://www.tum.de/en/) under the supervision of [Slobodan Ilic](https://campar.in.tum.de/Main/SlobodanIlic), focusing on computer vision and 3D perception.
