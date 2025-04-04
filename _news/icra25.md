@@ -4,4 +4,4 @@ date: 2025-01-01
 inline: true
 ---
 
-*OmniShape* accepted to ICRA'25!
+Our work on *multi-hypothesis shape and pose estimation* accepted to ICRA'25!
