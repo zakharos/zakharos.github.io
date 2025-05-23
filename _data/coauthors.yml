@@ -1,3 +1,18 @@
+"Shakhnarovich":
+  - firstname: ["Greg", "Greg Shakhnarovich"]
+    url: https://home.ttic.edu/~gregory/
+
+"Pfaff":
+  - firstname: ["Nicholas", "Nicholas Pfaff"]
+    url: https://nepfaff.github.io/
+
+"Dai":
+  - firstname: ["Hongkai", "Hongkai Dai"]
+    url: https://hongkai-dai.github.io/
+
+"Tedrake":
+  - firstname: ["Russ", "Russ Tedrake"]
+    url: https://locomotion.csail.mit.edu/russt.html
 
 "Iwase":
   - firstname: ["Shun", "Shun Iwase"]
