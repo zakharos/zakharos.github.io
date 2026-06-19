@@ -289,7 +289,8 @@
             </span>
           {%- endif %}
           {%- assign title_key = entry.title | downcase | strip -%}
-          {%- assign cite_count = site.data.paper_stats.citations[title_key] %}
+          {%- assign scholar_key = site.data.scholar_title_map[title_key] | default: title_key -%}
+          {%- assign cite_count = site.data.paper_stats.citations[scholar_key] %}
           <span class="btn-with-count">
             <a href="https://scholar.google.com/scholar?q={{ entry.title | url_encode }}" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank"><i class="ai ai-google-scholar"></i> Cite <span class="count-badge cite-count">{% if cite_count and cite_count > 0 %}<i class="fa-solid fa-quote-left"></i> {{ cite_count }}{% endif %}</span></a>
           </span>
