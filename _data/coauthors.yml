@@ -1,6 +1,244 @@
+"Jain":
+  - firstname: ["Arhan", "Arhan Jain"]
+    url: https://arhanjain.github.io/
+
+"Zhang":
+  - firstname: ["Mingtong", "Mingtong Zhang"]
+    url: https://robo-alex.github.io/
+
+"Arora":
+  - firstname: ["Kanav", "Kanav Arora"]
+    url: https://www.linkedin.com/in/kanav1arora/
+
+"Torne":
+  - firstname: ["Marcel", "Marcel Torne"]
+    url: https://marceltorne.github.io/
+
+"Levine":
+  - firstname: ["Sergey", "Sergey Levine"]
+    url: https://people.eecs.berkeley.edu/~svlevine/
+
+"Finn":
+  - firstname: ["Chelsea", "Chelsea Finn"]
+    url: https://ai.stanford.edu/~cbfinn/
+
+"Ma":
+  - firstname: ["Wei-Chiu", "Wei-Chiu Ma"]
+    url: https://www.cs.cornell.edu/~weichiu/
+
+"Shah":
+  - firstname: ["Dhruv", "Dhruv Shah"]
+    url: https://robodhruv.github.io/
+
+"Wang":
+  - firstname: ["Yue", "Yue Wang"]
+    url: https://yuewang.xyz/
+  - firstname: ["Zehao", "Zehao Wang"]
+    url: https://homes.esat.kuleuven.be/~zwang/
+
+"Gupta":
+  - firstname: ["Abhishek", "Abhishek Gupta"]
+    url: https://homes.cs.washington.edu/~abhgupta/
+  - firstname: ["Swati", "Swati Gupta"]
+    url: https://www.linkedin.com/in/swati-gupta-7761b0bb
+
+"Cheng":
+  - firstname: ["Fangzhou", "Fangzhou Cheng"]
+    url: https://www.linkedin.com/in/fangzhou-cheng-524218b5
+
+"Pertsch":
+  - firstname: ["Karl", "Karl Pertsch"]
+    url: https://kpertsch.github.io/
+
+"Lee":
+  - firstname: ["Robert", "Robert Lee"]
+    url: https://scholar.google.com/citations?user=1Vqlm0kAAAAJ&hl=en
+
+"Kollar":
+  - firstname: ["Thomas", "Thomas Kollar"]
+    url: http://www.tkollar.com/site/
+
+"Kira":
+  - firstname: ["Zsolt", "Zsolt Kira"]
+    url: https://faculty.cc.gatech.edu/~zk15/
+
+"Ambrus":
+  - firstname: ["Rares", "Rares Ambrus"]
+    url: https://raresambrus.com/
+
+"Guibas":
+  - firstname: ["Leonidas", "Leonidas J", "Leonidas J.", "Leonidas Guibas"]
+    url: https://geometry.stanford.edu/member/guibas
+
+"Ernst":
+  - firstname: ["Jan", "Jan Ernst"]
+    url: https://scholar.google.com/citations?user=hFUJkFgAAAAJ&hl=en
+
 "Li":
+  - firstname: ["Yunzhu", "Yunzhu Li"]
+    url: https://yunzhuli.github.io/
   - firstname: ["Jie", "Jie Li"]
     url: https://www.linkedin.com/in/jie-li-57217277
+
+"Freeman":
+  - firstname: ["William", "William Freeman"]
+    url: https://billf.mit.edu/
+
+"Valada":
+  - firstname: ["Abhinav", "Abhinav Valada"]
+    url: https://rl.uni-freiburg.de/people/valada
+
+"Bohg":
+  - firstname: ["Jeannette", "Jeannette Bohg"]
+    url: https://web.stanford.edu/~bohg/
+
+"Nishiwaki":
+  - firstname: ["Koichi", "Koichi Nishiwaki"]
+    url: https://scholar.google.com/citations?hl=en&user=oC2CnhUAAAAJ
+
+"Kitani":
+  - firstname: ["Kris", "Kris Kitani"]
+    url: https://kriskitani.github.io/
+
+"Daniilidis":
+  - firstname: ["Kostas", "Kostas Daniilidis"]
+    url: https://www.cis.upenn.edu/~kostas/
+
+"Seita":
+  - firstname: ["Daniel", "Daniel Seita"]
+    url: https://danielseita.github.io/
+
+"Cohn":
+  - firstname: ["Thomas", "Thomas Cohn"]
+    url: https://tommycohn.com/
+
+"Cory":
+  - firstname: ["Rick", "Rick Cory"]
+    url: https://www.linkedin.com/in/rick-cory-31a68979/
+
+"Karageorgis":
+  - firstname: ["Platon", "Platon Karageorgis"]
+    url: https://www.linkedin.com/in/platon-karageorgis/
+
+"Zhao":
+  - firstname: ["Zhenyu", "Zhenyu Zhao"]
+    url: https://zhenyuzhao.com
+  - firstname: ["Siheng", "Siheng Zhao"]
+    url: https://sihengz02.github.io/
+
+"Jing":
+  - firstname: ["Hongyi", "Hongyi Jing"]
+    url: https://hongyijing.me
+
+"Liu":
+  - firstname: ["Xiawei", "Xiawei Liu"]
+    url: https://www.xiaweiliu.com
+  - firstname: ["Katherine", "K."]
+    url: https://www.thekatherineliu.com/
+  - firstname: ["Ruoshi", "Ruoshi Liu"]
+    url: https://ruoshiliu.github.io/
+
+"Mao":
+  - firstname: ["Jiageng", "Jiageng Mao"]
+    url: https://pointscoder.github.io
+
+"Jha":
+  - firstname: ["Abha", "Abha Jha"]
+    url: https://scholar.google.com/citations?user=3-4adIAAAAAJ&hl=en
+
+"Yang":
+  - firstname: ["Hanwen", "Hanwen Yang"]
+    url: https://www.linkedin.com/in/hwyang1501/
+  - firstname: ["Yanchao", "Yanchao Yang"]
+    url: https://yanchaoyang.github.io/
+
+"Shangguan":
+  - firstname: ["Zeyu", "Zeyu Shangguan"]
+    url: https://zshanggu.github.io/
+
+"Shi":
+  - firstname: ["Tianheng", "Tianheng Shi"]
+    url: https://scholar.google.com/citations?user=-lt9rGIAAAAJ&hl=en
+
+"Zolotas":
+  - firstname: ["Mark", "Mark Zolotas"]
+    url: https://markzolotas.com/
+
+"Feng":
+  - firstname: ["Siyuan", "Siyuan Feng"]
+    url: https://scholar.google.com/citations?user=W9HvNZwAAAAJ&hl=en
+
+"Ford":
+  - firstname: ["Stacie", "Stacie Ford"]
+    url: https://www.linkedin.com/in/stacie-ford-0773843/
+
+"Kress-Gazit":
+  - firstname: ["Hadas", "Hadas Kress-Gazit"]
+    url: https://www.duffield.cornell.edu/people/hadas-kress-gazit/
+
+"Burchfiel":
+  - firstname: ["Benjamin", "Benjamin Burchfiel"]
+    url: https://scholar.google.com/citations?user=eGoTK1YAAAAJ&hl=en
+
+"Barreiros":
+  - firstname: ["Jose", "Jose Barreiros"]
+    url: https://scholar.google.com/citations?user=mLFRRpkAAAAJ&hl=en
+
+"Beaulieu":
+  - firstname: ["Andrew", "Andrew Beaulieu"]
+    url: https://www.linkedin.com/in/abeaulieu/
+
+"Bhat":
+  - firstname: ["Aditya", "Aditya Bhat"]
+    url: https://www.linkedin.com/in/mradityabhat/
+
+"Cousineau":
+  - firstname: ["Eric", "Eric Cousineau"]
+    url: https://www.linkedin.com/in/eacousineau/
+
+"Chandratreya":
+  - firstname: ["Ishaan Preetam", "Ishaan", "Ishaan Preetam Chandratreya"]
+    url: https://ishaanchandratreya.github.io/
+
+"Charatan":
+  - firstname: ["David", "David Charatan"]
+    url: https://davidcharatan.com/
+
+"Isola":
+  - firstname: ["Phillip", "Phillip Isola"]
+    url: https://web.mit.edu/phillipi/
+
+"Zadaianchuk":
+  - firstname: ["Andrii", "Andrii Zadaianchuk"]
+    url: https://zadaianchuk.github.io/
+
+"Barcellona":
+  - firstname: ["Leonardo", "Leonardo Barcellona"]
+    url: https://leobarcellona.github.io/
+
+"Schuenemann":
+  - firstname: ["Lennard", "Lennard Schuenemann"]
+    url: https://github.com/lschunemann
+
+"Schünemann":
+  - firstname: ["Lennard", "Lennard Schünemann"]
+    url: https://github.com/lschunemann
+
+"Gumbsch":
+  - firstname: ["Christian", "Christian Gumbsch"]
+    url: https://cgumbsch.github.io/
+
+"Despinoy":
+  - firstname: ["Fabien", "Fabien Despinoy"]
+    url: https://be.linkedin.com/in/fabiendespinoy
+
+"Aljundi":
+  - firstname: ["Rahaf", "Rahaf Aljundi"]
+    url: https://be.linkedin.com/in/rahaf-aljundi
+
+"Gavves":
+  - firstname: ["Stratis", "Efstratios", "Efstratios Gavves", "Stratis Gavves"]
+    url: https://www.egavves.com/
 
 "Davis":
   - firstname: ["Davis", "Davis Rempe"]
@@ -56,7 +294,11 @@
 
 "Van Hoorick":
   - firstname: ["Basile", "Basile Van Hoorick"]
-    url: https://basile.be/about-me/
+    url: https://basile.be/
+
+"Hoorick":
+  - firstname: ["Basile Van", "Basile"]
+    url: https://basile.be/
 
 "Vondrick":
   - firstname: ["Carl", "Carl Vondrick"]
@@ -64,7 +306,7 @@
 
 "Vasiljevic":
   - firstname: ["Igor", "Igor Vasiljevic"]
-    url: https://home.ttic.edu/~ivas/
+    url: https://ivasiljevic.github.io/
 
 "Fang":
   - firstname: ["Jiading", "Jiading Fang"]
@@ -177,8 +419,8 @@
   url: https://scholar.google.com/citations?user=_UJsz3AAAAAJ
 
 "Guizilini":
-- firstname: ["Vitor", "V."]
-  url: https://scholar.google.com.br/citations?user=UH9tP6QAAAAJ
+- firstname: ["Vitor", "V.", "Vitor Campagnolo", "Vitor Campagnolo Guizilini"]
+  url: https://vitorguizilini.github.io/
 
 "Durand":
 - firstname: ["Fredo", "F."]
@@ -211,9 +453,3 @@
 "Cai":
 - firstname: ["Yancheng", "Yancheng Cai"]
   url: https://caiyancheng.github.io/academic.html
-
-"Liu":
-- firstname: ["Katherine", "K."]
-  url: https://www.thekatherineliu.com/
-- firstname: ["Ruoshi", "Ruoshi Liu"]
-  url: https://ruoshiliu.github.io/
