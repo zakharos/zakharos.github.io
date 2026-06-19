@@ -46,6 +46,7 @@
     "neural groundplans: persistent neural scene representations from a single image": 33,
     "keep it unreal: bridging the realism gap for 2.5 d recognition with geometry priors only": 33,
     "diffusionnocs: managing symmetry and uncertainty in sim2real multi-modal category-level pose estimation": 31,
+    "fsd: fast self-supervised single rgb-d to categorical 3d objects": 22,
     "zerograsp: zero-shot shape reconstruction enabled robotic grasping": 21,
     "single-shot scene reconstruction": 19,
     "spot: spatiotemporal modeling for 3d object tracking": 17,
@@ -58,6 +59,7 @@
     "zero-shot multi-object scene completion": 13,
     "scenesmith: agentic generation of simulation-ready indoor scenes": 12,
     "equivariant ray embeddings for implicit multi-view depth estimation": 10,
+    "robot learning from any images": 9,
     "steerable scene generation with post training and inference-time search": 8,
     "delira: self-supervised depth, light, and radiance fields": 6,
     "road: learning an implicit recursive octree auto-decoder to efficiently encode 3d shapes": 6,
@@ -67,5 +69,5 @@
     "reconstruction by generation: 3d multi-object scene reconstruction from sparse observations": 1,
     "from demonstrations to rewards: test-time prompt optimization for vlm reward models": 0
   },
-  "updated": "2026-06-19T23:12:57.428Z"
+  "updated": "2026-06-19T23:22:34.879Z"
 }
