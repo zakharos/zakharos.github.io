@@ -36,28 +36,5 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(() => {});
     }, i * 100);
   });
-
-  // Fetch citation counts from Semantic Scholar (only if not pre-populated)
-  document.querySelectorAll('.btn-with-count').forEach(function(wrapper, i) {
-    const btn = wrapper.querySelector('.cite-btn[data-arxiv], .cite-btn[data-doi]');
-    if (!btn) return;
-    const countEl = wrapper.querySelector('.cite-count');
-    if (countEl && countEl.textContent.trim()) return;
-    const arxiv = btn.getAttribute('data-arxiv');
-    const doi = btn.getAttribute('data-doi');
-    const paperId = arxiv ? 'arXiv:' + arxiv : doi;
-    if (!paperId) return;
-    
-    setTimeout(function() {
-      fetch('https://api.semanticscholar.org/graph/v1/paper/' + encodeURIComponent(paperId) + '?fields=citationCount')
-      .then(r => r.json())
-      .then(data => {
-        if (typeof data.citationCount === 'number' && data.citationCount > 0) {
-          if (countEl) countEl.innerHTML = '<i class="fa-solid fa-quote-left"></i> ' + formatCount(data.citationCount);
-        }
-      })
-      .catch(() => {});
-    }, i * 50);
-  });
 });
 </script>

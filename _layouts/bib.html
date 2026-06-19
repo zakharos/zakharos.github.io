@@ -288,23 +288,11 @@
               <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> Code {%- if github_repo %}<span class="count-badge github-stars-count" data-repo="{{ github_repo }}">{% if github_stars %}<i class="fa-solid fa-star"></i> {{ github_stars }}{% endif %}</span>{%- endif %}</a>
             </span>
           {%- endif %}
-          {%- assign arxiv_id = entry.arxiv -%}
-          {%- unless arxiv_id -%}
-            {%- if entry.pdf contains 'arxiv.org' -%}
-              {%- assign arxiv_id = entry.pdf | split: 'arxiv.org/abs/' | last | split: 'arxiv.org/pdf/' | last | remove: '.pdf' -%}
-            {%- endif -%}
-          {%- endunless -%}
-          {%- assign cite_count = nil %}
-          {%- if arxiv_id %}
-            {%- assign cite_count = site.data.paper_stats.citations[arxiv_id] %}
-          {%- elsif entry.doi %}
-            {%- assign cite_count = site.data.paper_stats.citations[entry.doi] %}
-          {%- endif %}
-          {%- if arxiv_id or entry.doi %}
-            <span class="btn-with-count">
-              <a href="{% if arxiv_id %}https://scholar.google.com/scholar?q=arXiv:{{ arxiv_id }}{% else %}https://scholar.google.com/scholar?q={{ entry.doi }}{% endif %}" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" {% if arxiv_id %}data-arxiv="{{ arxiv_id }}"{% elsif entry.doi %}data-doi="{{ entry.doi }}"{% endif %}><i class="ai ai-google-scholar"></i> Cite <span class="count-badge cite-count">{% if cite_count and cite_count > 0 %}<i class="fa-solid fa-quote-left"></i> {{ cite_count }}{% endif %}</span></a>
-            </span>
-          {%- endif %}
+          {%- assign title_key = entry.title | downcase | strip -%}
+          {%- assign cite_count = site.data.paper_stats.citations[title_key] %}
+          <span class="btn-with-count">
+            <a href="https://scholar.google.com/scholar?q={{ entry.title | url_encode }}" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank"><i class="ai ai-google-scholar"></i> Cite <span class="count-badge cite-count">{% if cite_count and cite_count > 0 %}<i class="fa-solid fa-quote-left"></i> {{ cite_count }}{% endif %}</span></a>
+          </span>
           {%- if entry.abstract %}
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
           {%- endif %}

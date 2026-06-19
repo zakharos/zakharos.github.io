@@ -11,6 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install scholarly
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -18,6 +26,30 @@ jobs:
 
       - name: Fetch paper stats
         run: |
+          # First fetch Google Scholar citations with Python
+          python3 << 'PYEOF'
+import json
+from scholarly import scholarly
+
+author_id = "3DK3I-8AAAAJ"
+author = scholarly.search_author_id(author_id)
+author = scholarly.fill(author, sections=["publications"])
+
+citations = {}
+for pub in author.get("publications", []):
+    filled_pub = scholarly.fill(pub)
+    title = filled_pub.get("bib", {}).get("title", "").lower().strip()
+    num_citations = filled_pub.get("num_citations", 0)
+    if title:
+        citations[title] = num_citations
+        print(f"{title[:60]}...: {num_citations}")
+
+with open('/tmp/scholar_citations.json', 'w') as f:
+    json.dump(citations, f)
+print(f"\nTotal: {len(citations)} papers")
+PYEOF
+
+          # Then combine with GitHub stats using Node
           node << 'EOF'
           const fs = require('fs');
           const https = require('https');
@@ -41,7 +73,22 @@ jobs:
 
           async function main() {
             const bib = fs.readFileSync('_bibliography/papers.bib', 'utf8');
-            const stats = { github: {}, citations: {}, updated: new Date().toISOString() };
+
+            // Load existing stats
+            let stats = { github: {}, citations: {}, updated: '' };
+            try {
+              stats = JSON.parse(fs.readFileSync('_data/paper_stats.json', 'utf8'));
+            } catch (e) {
+              console.log('No existing stats file, starting fresh');
+            }
+
+            // Load scholar citations
+            try {
+              stats.citations = JSON.parse(fs.readFileSync('/tmp/scholar_citations.json', 'utf8'));
+              console.log(`Loaded ${Object.keys(stats.citations).length} scholar citations`);
+            } catch (e) {
+              console.error('Failed to load scholar citations:', e.message);
+            }
 
             // Extract GitHub repos
             const githubRegex = /code\s*=\s*\{https:\/\/github\.com\/([^\/]+)\/([^\/\}]+)/g;
@@ -67,43 +114,7 @@ jobs:
               }
             }
 
-            // Extract arXiv IDs from pdf URLs
-            const arxivRegex = /pdf\s*=\s*\{https:\/\/arxiv\.org\/(?:abs|pdf)\/(\d+\.\d+)/g;
-            const arxivIds = new Set();
-            while ((match = arxivRegex.exec(bib)) !== null) {
-              arxivIds.add(match[1]);
-            }
-
-            // Fetch citation counts from Semantic Scholar (with longer delay to avoid rate limits)
-            for (const arxivId of arxivIds) {
-              try {
-                await delay(1500);
-                const data = await fetch(`https://api.semanticscholar.org/graph/v1/paper/arXiv:${arxivId}?fields=citationCount`);
-                if (typeof data.citationCount === 'number') {
-                  stats.citations[arxivId] = data.citationCount;
-                  console.log(`arXiv:${arxivId}: ${data.citationCount} citations`);
-                }
-              } catch (e) {
-                console.error(`Failed to fetch arXiv:${arxivId}: ${e.message}`);
-              }
-            }
-
-            // Extract DOIs
-            const doiRegex = /doi\s*=\s*\{([^\}]+)\}/g;
-            while ((match = doiRegex.exec(bib)) !== null) {
-              const doi = match[1];
-              try {
-                await delay(1500);
-                const data = await fetch(`https://api.semanticscholar.org/graph/v1/paper/${doi}?fields=citationCount`);
-                if (typeof data.citationCount === 'number') {
-                  stats.citations[doi] = data.citationCount;
-                  console.log(`DOI ${doi}: ${data.citationCount} citations`);
-                }
-              } catch (e) {
-                console.error(`Failed to fetch DOI ${doi}: ${e.message}`);
-              }
-            }
-
+            stats.updated = new Date().toISOString();
             fs.mkdirSync('_data', { recursive: true });
             fs.writeFileSync('_data/paper_stats.json', JSON.stringify(stats, null, 2));
             console.log('\nSaved to _data/paper_stats.json');
