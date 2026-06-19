@@ -696,6 +696,25 @@ footer.sticky-bottom {
         font-weight: bolder;
       }
 
+      .award {
+        color: white !important;
+        background-color: var(--global-theme-color);
+        padding: 0 0.5rem;
+        margin-left: 0.5rem;
+        font-style: normal;
+        font-weight: normal !important;
+        font-size: 0.75em;
+        border-radius: 3px;
+
+        &.oral {
+          background-color: #cd7f32;
+        }
+
+        &.spotlight {
+          background-color: var(--global-theme-color);
+        }
+      }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
@@ -732,10 +751,61 @@ footer.sticky-bottom {
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           margin-left: 0;
+          border-radius: 0.5rem;
+
+          i {
+            margin-right: 0.3em;
+          }
 
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
+          }
+        }
+
+        .btn-with-count {
+          display: inline-flex;
+          align-items: center;
+          vertical-align: middle;
+
+          a.btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+          }
+
+          &:has(.count-badge:not(:empty)) a.btn {
+            padding-right: 0.4rem;
+          }
+
+          .count-badge {
+            display: none;
+            align-items: center;
+            padding: 0.05rem 0.3rem;
+            font-size: 0.65rem;
+            color: var(--global-bg-color);
+            background-color: #555;
+            border-radius: 0.25rem;
+            line-height: 1.2;
+
+            i {
+              margin-right: 0.15em;
+              font-size: 0.7em;
+            }
+
+            &:not(:empty) {
+              display: inline-flex;
+            }
+          }
+
+          &:hover {
+            a.btn {
+              color: var(--global-theme-color);
+              border-color: var(--global-theme-color);
+            }
+            .count-badge {
+              background-color: var(--global-theme-color);
+            }
           }
         }
       }

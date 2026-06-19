@@ -1,0 +1,36 @@
+{
+  "github": {
+    "dcharatan/millivid": 63,
+    "TRI-ML/recgen": 191,
+    "nepfaff/scenesmith": 465,
+    "arhanjain/PolaRiS": 199,
+    "physical-superintelligence-lab/Humanoid-Everyday": 142,
+    "PointsCoder/OpenReal2Sim": 227,
+    "nepfaff/steerable-scene-generation": 86,
+    "sh8/ZeroGrasp": 90,
+    "s-tian/VISTA": 31,
+    "TRI-ML/OctMAE": 29,
+    "zubair-irshad/NeRF-MAE": 105,
+    "TRI-ML/refine": 8,
+    "cvlab-columbia/zero123": 3053,
+    "tri-ml/vidar": 642,
+    "zubair-irshad/NeO-360": 246,
+    "robot-learning-freiburg/CARTO": 26,
+    "TRI-ML/road": 16,
+    "coltonstearns/SpOT": 30,
+    "zubair-irshad/shapo": 197,
+    "TRI-ML/vidar": 642,
+    "TRI-ML/sdflabel": 163,
+    "zakharos/DPOD": 58,
+    "ilics/homebrewdb": 29
+  },
+  "citations": {
+    "2606.09056": 0,
+    "1902.11020": 491,
+    "10.1109/ICCV51070.2023.00853": 1729,
+    "1904.03167": 197,
+    "2510.08807": 16,
+    "2507.05331": 116
+  },
+  "updated": "2026-06-19T21:32:57.619Z"
+}

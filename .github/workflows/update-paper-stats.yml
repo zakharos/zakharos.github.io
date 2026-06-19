@@ -1,0 +1,121 @@
+name: Update Paper Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch paper stats
+        run: |
+          node << 'EOF'
+          const fs = require('fs');
+          const https = require('https');
+
+          const fetch = (url, options = {}) => new Promise((resolve, reject) => {
+            const req = https.get(url, { headers: { 'User-Agent': 'paper-stats-bot', ...options.headers } }, res => {
+              let data = '';
+              res.on('data', chunk => data += chunk);
+              res.on('end', () => {
+                if (res.statusCode >= 200 && res.statusCode < 300) {
+                  resolve(JSON.parse(data));
+                } else {
+                  reject(new Error(`HTTP ${res.statusCode}: ${data}`));
+                }
+              });
+            });
+            req.on('error', reject);
+          });
+
+          const delay = ms => new Promise(r => setTimeout(r, ms));
+
+          async function main() {
+            const bib = fs.readFileSync('_bibliography/papers.bib', 'utf8');
+            const stats = { github: {}, citations: {}, updated: new Date().toISOString() };
+
+            // Extract GitHub repos
+            const githubRegex = /code\s*=\s*\{https:\/\/github\.com\/([^\/]+)\/([^\/\}]+)/g;
+            const repos = new Set();
+            let match;
+            while ((match = githubRegex.exec(bib)) !== null) {
+              repos.add(`${match[1]}/${match[2]}`);
+            }
+
+            // Fetch GitHub stars
+            for (const repo of repos) {
+              try {
+                await delay(100);
+                const data = await fetch(`https://api.github.com/repos/${repo}`, {
+                  headers: { 'Accept': 'application/vnd.github.v3+json' }
+                });
+                if (typeof data.stargazers_count === 'number') {
+                  stats.github[repo] = data.stargazers_count;
+                  console.log(`GitHub ${repo}: ${data.stargazers_count} stars`);
+                }
+              } catch (e) {
+                console.error(`Failed to fetch ${repo}: ${e.message}`);
+              }
+            }
+
+            // Extract arXiv IDs from pdf URLs
+            const arxivRegex = /pdf\s*=\s*\{https:\/\/arxiv\.org\/(?:abs|pdf)\/(\d+\.\d+)/g;
+            const arxivIds = new Set();
+            while ((match = arxivRegex.exec(bib)) !== null) {
+              arxivIds.add(match[1]);
+            }
+
+            // Fetch citation counts from Semantic Scholar (with longer delay to avoid rate limits)
+            for (const arxivId of arxivIds) {
+              try {
+                await delay(1500);
+                const data = await fetch(`https://api.semanticscholar.org/graph/v1/paper/arXiv:${arxivId}?fields=citationCount`);
+                if (typeof data.citationCount === 'number') {
+                  stats.citations[arxivId] = data.citationCount;
+                  console.log(`arXiv:${arxivId}: ${data.citationCount} citations`);
+                }
+              } catch (e) {
+                console.error(`Failed to fetch arXiv:${arxivId}: ${e.message}`);
+              }
+            }
+
+            // Extract DOIs
+            const doiRegex = /doi\s*=\s*\{([^\}]+)\}/g;
+            while ((match = doiRegex.exec(bib)) !== null) {
+              const doi = match[1];
+              try {
+                await delay(1500);
+                const data = await fetch(`https://api.semanticscholar.org/graph/v1/paper/${doi}?fields=citationCount`);
+                if (typeof data.citationCount === 'number') {
+                  stats.citations[doi] = data.citationCount;
+                  console.log(`DOI ${doi}: ${data.citationCount} citations`);
+                }
+              } catch (e) {
+                console.error(`Failed to fetch DOI ${doi}: ${e.message}`);
+              }
+            }
+
+            fs.mkdirSync('_data', { recursive: true });
+            fs.writeFileSync('_data/paper_stats.json', JSON.stringify(stats, null, 2));
+            console.log('\nSaved to _data/paper_stats.json');
+          }
+
+          main().catch(e => { console.error(e); process.exit(1); });
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add _data/paper_stats.json
+          git diff --staged --quiet || git commit -m "Update paper stats [skip ci]"
+          git push
