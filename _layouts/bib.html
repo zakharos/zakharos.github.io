@@ -268,13 +268,13 @@
           <div class="links">
           {%- if entry.pdf %}
             {% if entry.pdf contains '://' -%}
-            <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf"></i> Paper</a>
+            <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span></a>
             {%- else -%}
-            <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf"></i> Paper</a>
+            <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span></a>
             {%- endif %}
           {%- endif %}
           {%- if entry.website %}
-            <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-globe"></i> Website</a>
+            <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span></a>
           {%- endif %}
           {%- if entry.code %}
             {%- assign github_repo = nil %}
@@ -285,14 +285,14 @@
               {%- assign github_stars = site.data.paper_stats.github[github_repo] %}
             {%- endif %}
             <span class="btn-with-count">
-              <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i> Code {%- if github_repo %}<span class="count-badge github-stars-count" data-repo="{{ github_repo }}">{% if github_stars %}<i class="fa-solid fa-star"></i> {{ github_stars }}{% endif %}</span>{%- endif %}</a>
+              <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span> {%- if github_repo %}<span class="count-badge github-stars-count" data-repo="{{ github_repo }}">{% if github_stars %}<i class="fa-solid fa-star"></i> {{ github_stars }}{% endif %}</span>{%- endif %}</a>
             </span>
           {%- endif %}
           {%- assign title_key = entry.title | downcase | strip -%}
           {%- assign scholar_key = site.data.scholar_title_map[title_key] | default: title_key -%}
           {%- assign cite_count = site.data.paper_stats.citations[scholar_key] %}
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q={{ entry.title | url_encode }}" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank"><i class="ai ai-google-scholar"></i> Cite <span class="count-badge cite-count">{% if cite_count and cite_count > 0 %}<i class="fa-solid fa-quote-left"></i> {{ cite_count }}{% endif %}</span></a>
+            <a href="https://scholar.google.com/scholar?q={{ entry.title | url_encode }}" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span> <span class="count-badge cite-count">{% if cite_count and cite_count > 0 %}<i class="fa-solid fa-quote-left"></i> {{ cite_count }}{% endif %}</span></a>
           </span>
           {%- if entry.abstract %}
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>

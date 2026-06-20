@@ -28,8 +28,10 @@ layout: default
               class=profile_image_class
               alt=page.profile.image
               cache_bust=true -%}
-              <div class="contact-icons" style="display: flex; justify-content: space-around">
-                {% include social.html %}
+              <div class="social">
+                <div class="contact-icons">
+                  {% include social.html %}
+                </div>
               </div>
             {% endif -%}
             {%- if page.profile.more_info %}
@@ -46,19 +48,19 @@ layout: default
 
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
+            <h2 style="margin-top: 1.5rem;"><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
             {%- include news.html limit=true %}
           {%- endif %}
 
           <!-- Latest posts -->
           {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
+            <h2 style="margin-top: 1.5rem;"><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
             {%- include latest_posts.html %}
           {%- endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            <h2 style="margin-top: 1.5rem;"><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
             {%- include selected_papers.html %}
           {%- endif %}
 
