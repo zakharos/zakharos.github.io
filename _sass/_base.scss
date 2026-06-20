@@ -19,6 +19,10 @@ strong {
   color: var(--global-text-color);
 }
 
+.keyword {
+  border-bottom: 1px dotted var(--global-text-color);
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
