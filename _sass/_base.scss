@@ -825,6 +825,30 @@ footer.sticky-bottom {
         &.spotlight {
           background-color: var(--global-theme-color);
         }
+
+        &.workshop {
+          background-color: #6c757d;
+          cursor: help;
+
+          &[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.7em;
+            white-space: nowrap;
+            margin-bottom: 0.25rem;
+          }
+
+          &[title] {
+            position: relative;
+          }
+        }
       }
 
       .author {

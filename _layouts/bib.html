@@ -239,10 +239,10 @@
         {% assign proceedings = "inproceedings,incollection" | split: ','%}
         {% assign thesis = "thesis,mastersthesis,phdthesis" | split: ','%}
         {% if entry.type == "article" -%}
-          {%- capture entrytype -%}<em>{{entry.journal}} {{entry.year}}</em>{%- if entry.award -%} <span class="award badge {{ entry.award | downcase }}">{{entry.award}}</span>{%- endif -%}{%- endcapture -%}
+          {%- capture entrytype -%}<em>{{entry.journal}} {{entry.year}}</em>{%- if entry.award -%} <span class="award badge {% if entry.workshop %}workshop{% else %}{{ entry.award | downcase }}{% endif %}"{% if entry.workshop %} title="{{entry.workshop}}"{% endif %}>{% if entry.workshop %}Workshop {% endif %}{{entry.award}}</span>{%- endif -%}{%- endcapture -%}
           {%- assign skip_year = true -%}
         {%- elsif proceedings contains entry.type -%}
-          {%- capture entrytype -%}<em>{{entry.booktitle}} {{entry.year}}</em>{%- if entry.award -%} <span class="award badge {{ entry.award | downcase }}">{{entry.award}}</span>{%- endif -%}{%- endcapture -%}
+          {%- capture entrytype -%}<em>{{entry.booktitle}} {{entry.year}}</em>{%- if entry.award -%} <span class="award badge {% if entry.workshop %}workshop{% else %}{{ entry.award | downcase }}{% endif %}"{% if entry.workshop %} title="{{entry.workshop}}"{% endif %}>{% if entry.workshop %}Workshop {% endif %}{{entry.award}}</span>{%- endif -%}{%- endcapture -%}
           {%- assign skip_year = true -%}
         {%- elsif thesis contains entry.type -%}
           {%- capture entrytype -%}<em>{{entry.school}}</em> {%- endcapture -%}
@@ -308,7 +308,7 @@
             {%- endif %}
           {%- endif %}
           {%- if entry.blog %}
-            <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
+            <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-newspaper"></i><span class="btn-text"> Blog</span></a>
           {%- endif %}
           {%- if entry.poster %}
             {% if entry.poster contains '://' -%}
