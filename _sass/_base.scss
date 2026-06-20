@@ -210,16 +210,16 @@ blockquote {
         }
 
         &:hover {
-          background-color: var(--global-theme-color);
+          background-color: var(--global-bg-color);
 
           i {
-            color: white;
+            color: var(--global-theme-color);
           }
 
           .social-label {
             max-width: 4rem;
             margin-left: 0.3rem;
-            color: white;
+            color: var(--global-theme-color);
           }
         }
 

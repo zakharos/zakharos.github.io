@@ -8,11 +8,11 @@ middle_name:
 last_name: Zakharov
 email: sergey.zakharov.ml@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal website of Sergey Zakharov
+  Sergey Zakharov - Senior Research Scientist at Toyota Research Institute. Research in 3D reconstruction, generative modeling, and robotics.
 # footer_text: >
 #   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: sergey's personal website
+keywords: Sergey Zakharov, computer vision, 3D reconstruction, generative modeling, robotics, machine learning, Toyota Research Institute
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🍣 # the emoji used as the favicon
@@ -57,9 +57,9 @@ max_width: 800px
 # Open Graph & Schema.org
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
