@@ -15,7 +15,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 keywords: Sergey Zakharov, computer vision, 3D reconstruction, generative modeling, robotics, machine learning, Toyota Research Institute
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🍣 # the emoji used as the favicon
+icon: favicon.ico # profile picture as favicon
 url:  # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
