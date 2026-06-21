@@ -1,7 +1,7 @@
 ---
 ---
 <!-- _layouts/bib.html -->
-      <div class="row">
+      <div class="row" {% if entry.tags %}data-tags="{{ entry.tags }}"{% endif %}>
         {%- if site.enable_publication_thumbnails -%}
         <div class="col-sm-4 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
@@ -259,6 +259,14 @@
         {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" and skip_year != true -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
         <div class="periodical">
           {{ periodical | strip }}
+          {%- if entry.tags -%}
+          <span class="pub-tags">
+            {%- assign tag_list = entry.tags | split: ", " -%}
+            {%- for tag in tag_list limit: 3 -%}
+              <span class="pub-tag">{{ site.data.tag_labels[tag] | default: tag }}</span>
+            {%- endfor -%}
+          </span>
+          {%- endif -%}
         </div>
         <div class="periodical">
           {{ entry.note | strip }}

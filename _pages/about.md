@@ -21,4 +21,6 @@ social: true  # includes social icons at the bottom of the page
 
 I am a Senior Research Scientist and Technical Lead at [Toyota Research Institute](https://www.tri.global/). My research goal is to build intelligent systems with a reliable 3D understanding of the physical world — so they can reconstruct it, generate it, and act in it. 
 
-My research spans <span class="keyword">3D reconstruction</span>, <span class="keyword">generative modeling</span>, <span class="keyword">implicit neural representations</span>, <span class="keyword">world models and simulation</span>, <span class="keyword">domain adaptation</span>, and <span class="keyword">self-supervised learning</span>, with a strong focus on generalization and real-world transfer. I earned my PhD from the [Technical University of Munich](https://www.tum.de/en/) under [Slobodan Ilic](https://campar.in.tum.de/Main/SlobodanIlic).
+My research spans <a href="/publications/#3d-reconstruction" class="keyword">3D reconstruction</a>, <a href="/publications/#generative-modeling" class="keyword">generative modeling</a>, <a href="/publications/#neural-representations" class="keyword">neural representations</a>, <a href="/publications/#world-models" class="keyword">world models</a>, and <a href="/publications/#sim2real" class="keyword">sim-to-real</a>, with a strong focus on generalization and real-world transfer across robotics and autonomous driving.
+
+I earned my PhD from the [Technical University of Munich](https://www.tum.de/en/) under [Slobodan Ilic](https://campar.in.tum.de/Main/SlobodanIlic).

@@ -19,8 +19,34 @@ strong {
   color: var(--global-text-color);
 }
 
-.keyword {
+a.keyword {
   border-bottom: 1px dotted var(--global-text-color);
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
+.pub-tags {
+  // Tag chips hidden on cards for now; the topic filter still uses entry data-tags.
+  display: none;
+}
+
+.pub-tag {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.4rem;
+  padding: 0.02rem 0.35rem;
+  font-size: 0.6em;
+  color: var(--global-text-color-light);
+  margin-right: 0.25rem;
+  opacity: 0.75;
 }
 
 hr {
@@ -758,10 +784,12 @@ footer.sticky-bottom {
   h2.bibliography {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
     text-align: right;
+    font-size: 1.4rem;
+    line-height: 1.1;
   }
 
   ol.bibliography {
