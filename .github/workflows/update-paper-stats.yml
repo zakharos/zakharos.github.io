@@ -24,32 +24,32 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Fetch paper stats
+      - name: Fetch Google Scholar citations
         run: |
-          # First fetch Google Scholar citations with Python
           python3 << 'PYEOF'
-import json
-from scholarly import scholarly
+          import json
+          from scholarly import scholarly
 
-author_id = "3DK3I-8AAAAJ"
-author = scholarly.search_author_id(author_id)
-author = scholarly.fill(author, sections=["publications"])
+          author_id = "3DK3I-8AAAAJ"
+          author = scholarly.search_author_id(author_id)
+          author = scholarly.fill(author, sections=["publications"])
 
-citations = {}
-for pub in author.get("publications", []):
-    filled_pub = scholarly.fill(pub)
-    title = filled_pub.get("bib", {}).get("title", "").lower().strip()
-    num_citations = filled_pub.get("num_citations", 0)
-    if title:
-        citations[title] = num_citations
-        print(f"{title[:60]}...: {num_citations}")
+          citations = {}
+          for pub in author.get("publications", []):
+              filled_pub = scholarly.fill(pub)
+              title = filled_pub.get("bib", {}).get("title", "").lower().strip()
+              num_citations = filled_pub.get("num_citations", 0)
+              if title:
+                  citations[title] = num_citations
+                  print(f"{title[:60]}...: {num_citations}")
 
-with open('/tmp/scholar_citations.json', 'w') as f:
-    json.dump(citations, f)
-print(f"\nTotal: {len(citations)} papers")
-PYEOF
+          with open('/tmp/scholar_citations.json', 'w') as f:
+              json.dump(citations, f)
+          print(f"\nTotal: {len(citations)} papers")
+          PYEOF
 
-          # Then combine with GitHub stats using Node
+      - name: Fetch GitHub stars and combine stats
+        run: |
           node << 'EOF'
           const fs = require('fs');
           const https = require('https');
