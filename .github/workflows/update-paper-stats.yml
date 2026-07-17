@@ -11,44 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install scholarly
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Fetch Google Scholar citations
-        run: |
-          python3 << 'PYEOF'
-          import json
-          from scholarly import scholarly
-
-          author_id = "3DK3I-8AAAAJ"
-          author = scholarly.search_author_id(author_id)
-          author = scholarly.fill(author, sections=["publications"])
-
-          citations = {}
-          for pub in author.get("publications", []):
-              filled_pub = scholarly.fill(pub)
-              title = filled_pub.get("bib", {}).get("title", "").lower().strip()
-              num_citations = filled_pub.get("num_citations", 0)
-              if title:
-                  citations[title] = num_citations
-                  print(f"{title[:60]}...: {num_citations}")
-
-          with open('/tmp/scholar_citations.json', 'w') as f:
-              json.dump(citations, f)
-          print(f"\nTotal: {len(citations)} papers")
-          PYEOF
-
-      - name: Fetch GitHub stars and combine stats
+      - name: Fetch paper stats
         run: |
           node << 'EOF'
           const fs = require('fs');
@@ -60,9 +28,13 @@ jobs:
               res.on('data', chunk => data += chunk);
               res.on('end', () => {
                 if (res.statusCode >= 200 && res.statusCode < 300) {
-                  resolve(JSON.parse(data));
+                  try {
+                    resolve(JSON.parse(data));
+                  } catch (e) {
+                    reject(new Error(`JSON parse error: ${e.message}`));
+                  }
                 } else {
-                  reject(new Error(`HTTP ${res.statusCode}: ${data}`));
+                  reject(new Error(`HTTP ${res.statusCode}: ${data.slice(0, 200)}`));
                 }
               });
             });
@@ -82,15 +54,31 @@ jobs:
               console.log('No existing stats file, starting fresh');
             }
 
-            // Load scholar citations
+            // Fetch citations from Semantic Scholar using author ID
+            // Sergey Zakharov's Semantic Scholar ID
+            const authorId = '2061682129';
+            console.log('Fetching papers from Semantic Scholar...');
+
             try {
-              stats.citations = JSON.parse(fs.readFileSync('/tmp/scholar_citations.json', 'utf8'));
-              console.log(`Loaded ${Object.keys(stats.citations).length} scholar citations`);
+              const authorData = await fetch(
+                `https://api.semanticscholar.org/graph/v1/author/${authorId}/papers?fields=title,citationCount&limit=100`
+              );
+
+              stats.citations = {};
+              for (const paper of authorData.data || []) {
+                if (paper.title && typeof paper.citationCount === 'number') {
+                  const title = paper.title.toLowerCase().trim();
+                  stats.citations[title] = paper.citationCount;
+                  console.log(`${title.slice(0, 60)}...: ${paper.citationCount}`);
+                }
+              }
+              console.log(`\nLoaded ${Object.keys(stats.citations).length} papers from Semantic Scholar`);
             } catch (e) {
-              console.error('Failed to load scholar citations:', e.message);
+              console.error('Failed to fetch from Semantic Scholar:', e.message);
+              console.log('Keeping existing citation data');
             }
 
-            // Extract GitHub repos
+            // Extract GitHub repos from bib file
             const githubRegex = /code\s*=\s*\{https:\/\/github\.com\/([^\/]+)\/([^\/\}]+)/g;
             const repos = new Set();
             let match;
@@ -99,6 +87,7 @@ jobs:
             }
 
             // Fetch GitHub stars
+            console.log('\nFetching GitHub stars...');
             for (const repo of repos) {
               try {
                 await delay(100);
