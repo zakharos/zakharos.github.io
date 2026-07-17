@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Fetch paper stats
+      - name: Fetch GitHub stars
         run: |
           node << 'EOF'
           const fs = require('fs');
@@ -46,36 +46,13 @@ jobs:
           async function main() {
             const bib = fs.readFileSync('_bibliography/papers.bib', 'utf8');
 
-            // Load existing stats
+            // Load existing stats (preserves citations)
             let stats = { github: {}, citations: {}, updated: '' };
             try {
               stats = JSON.parse(fs.readFileSync('_data/paper_stats.json', 'utf8'));
+              console.log(`Loaded existing stats with ${Object.keys(stats.citations).length} citations (preserved)`);
             } catch (e) {
               console.log('No existing stats file, starting fresh');
-            }
-
-            // Fetch citations from Semantic Scholar using author ID
-            // Sergey Zakharov's Semantic Scholar ID
-            const authorId = '2061682129';
-            console.log('Fetching papers from Semantic Scholar...');
-
-            try {
-              const authorData = await fetch(
-                `https://api.semanticscholar.org/graph/v1/author/${authorId}/papers?fields=title,citationCount&limit=100`
-              );
-
-              stats.citations = {};
-              for (const paper of authorData.data || []) {
-                if (paper.title && typeof paper.citationCount === 'number') {
-                  const title = paper.title.toLowerCase().trim();
-                  stats.citations[title] = paper.citationCount;
-                  console.log(`${title.slice(0, 60)}...: ${paper.citationCount}`);
-                }
-              }
-              console.log(`\nLoaded ${Object.keys(stats.citations).length} papers from Semantic Scholar`);
-            } catch (e) {
-              console.error('Failed to fetch from Semantic Scholar:', e.message);
-              console.log('Keeping existing citation data');
             }
 
             // Extract GitHub repos from bib file
@@ -96,7 +73,7 @@ jobs:
                 });
                 if (typeof data.stargazers_count === 'number') {
                   stats.github[repo] = data.stargazers_count;
-                  console.log(`GitHub ${repo}: ${data.stargazers_count} stars`);
+                  console.log(`${repo}: ${data.stargazers_count} stars`);
                 }
               } catch (e) {
                 console.error(`Failed to fetch ${repo}: ${e.message}`);
@@ -117,5 +94,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add _data/paper_stats.json
-          git diff --staged --quiet || git commit -m "Update paper stats [skip ci]"
+          git diff --staged --quiet || git commit -m "Update GitHub stars [skip ci]"
           git push
