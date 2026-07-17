@@ -6,4 +6,3 @@
 "omnishape: zero-shot multi-hypothesis object pose and shape estimation in the real world": "omnishape: zero-shot multi-hypothesis shape and pose estimation in the real world"
 "se3 equivariant ray embeddings for implicit multi-view depth estimation": "equivariant ray embeddings for implicit multi-view depth estimation"
 "zero-shot multi-object shape completion": "zero-shot multi-object scene completion"
-"self-supervised 3d representation learning for neural radiance fields": "nerf-mae: masked autoencoders for self-supervised 3d representation learning for neural radiance fields"
