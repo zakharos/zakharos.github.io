@@ -1,6 +1,6 @@
 {
   "github": {
-    "PointsCoder/OpenReal2Sim": 231,
+    "PointsCoder/OpenReal2Sim": 232,
     "zakharos/DPOD": 57,
     "TRI-ML/raiden": 75,
     "zubair-irshad/NeO-360": 247,
@@ -23,7 +23,7 @@
     "s-tian/VISTA": 31,
     "TRI-ML/refine": 7,
     "nepfaff/steerable-scene-generation": 86,
-    "nepfaff/scenesmith": 525,
+    "nepfaff/scenesmith": 527,
     "TRI-ML/OctMAE": 30
   },
   "citations": {
@@ -71,5 +71,5 @@
     "omnishape: zero-shot multi-hypothesis shape and pose estimation in the real world": 1,
     "from demonstrations to rewards: test-time prompt optimization for vlm reward models": 0
   },
-  "updated": "2026-07-17T15:58:42Z"
+  "updated": "2026-07-19T01:47:02.866Z"
 }
