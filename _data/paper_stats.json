@@ -1,29 +1,29 @@
 {
   "github": {
-    "PointsCoder/OpenReal2Sim": 238,
-    "zakharos/DPOD": 57,
+    "PointsCoder/OpenReal2Sim": 239,
+    "zakharos/DPOD": 58,
     "TRI-ML/raiden": 85,
     "zubair-irshad/NeO-360": 246,
     "physical-superintelligence-lab/Humanoid-Everyday": 165,
     "TRI-ML/recgen": 206,
-    "zubair-irshad/NeRF-MAE": 105,
+    "zubair-irshad/NeRF-MAE": 106,
     "cvlab-columbia/zero123": 3058,
     "woven-planet/DiffusionNOCS": 41,
     "robot-learning-freiburg/CARTO": 25,
     "tri-ml/vidar": 637,
-    "sh8/ZeroGrasp": 95,
+    "sh8/ZeroGrasp": 96,
     "TRI-ML/sdflabel": 163,
     "zubair-irshad/shapo": 198,
-    "dcharatan/millivid": 103,
+    "dcharatan/millivid": 107,
     "TRI-ML/vidar": 637,
     "TRI-ML/road": 15,
     "coltonstearns/SpOT": 30,
     "ilics/homebrewdb": 29,
-    "arhanjain/PolaRiS": 231,
+    "arhanjain/PolaRiS": 233,
     "s-tian/VISTA": 32,
     "TRI-ML/refine": 7,
     "nepfaff/steerable-scene-generation": 88,
-    "nepfaff/scenesmith": 578,
+    "nepfaff/scenesmith": 580,
     "TRI-ML/OctMAE": 32
   },
   "citations": {
@@ -71,5 +71,5 @@
     "omnishape: zero-shot multi-hypothesis shape and pose estimation in the real world": 1,
     "from demonstrations to rewards: test-time prompt optimization for vlm reward models": 0
   },
-  "updated": "2026-08-30T02:28:44.027Z"
+  "updated": "2026-09-06T01:57:44.742Z"
 }
