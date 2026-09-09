@@ -33,6 +33,28 @@ body.sticky-bottom-footer {
   }
 }
 
+// About page mobile layout
+@media (max-width: 576px) {
+  .post {
+    article {
+      display: flex;
+      flex-direction: column;
+
+      .profile {
+        order: -1;
+      }
+
+      .clearfix {
+        text-align: left;
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
 // TODO: redefine content layout.
 
 

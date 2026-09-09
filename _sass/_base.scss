@@ -208,6 +208,12 @@ blockquote {
       border: none;
       width: 100%;
 
+      @media (max-width: 576px) {
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
       a {
         flex: 0 0 auto;
         border: none;
@@ -216,8 +222,8 @@ blockquote {
         font-size: 1rem;
 
         @media (max-width: 576px) {
-          font-size: 1.1rem;
-          padding: 0.2rem;
+          font-size: 1.2rem;
+          padding: 0.3rem 0.5rem;
         }
 
         i {
@@ -289,8 +295,19 @@ blockquote {
   .profile.float-left,
   .profile.float-right {
     float: none !important;
-    max-width: 200px;
-    margin: 0 auto 1rem auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+
+    figure {
+      max-width: 180px;
+      margin: 0 auto 0.75rem auto;
+    }
+
+    .more-info {
+      text-align: center;
+    }
   }
 }
 
@@ -653,12 +670,14 @@ footer.sticky-bottom {
 
   @media (max-width: 576px) {
     text-align: center;
+    font-size: 1.75rem;
   }
 }
 
 .post-header {
   @media (max-width: 576px) {
     text-align: center;
+    margin-bottom: 1rem;
   }
 }
 

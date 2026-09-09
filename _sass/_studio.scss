@@ -1,0 +1,754 @@
+/*******************************************************************************
+ * Site theme ("studio"): editorial sans, compact type, soft pills.
+ * Scoped under :root so it wins over _base.scss by specificity, not order.
+ ******************************************************************************/
+
+:root {
+  --global-bg-color: #ffffff;
+  --global-text-color: #0f0f10;
+  --global-text-color-light: #77787c;
+  --global-theme-color: #0f0f10;
+  --global-hover-color: #77787c;
+  --global-divider-color: #ececee;
+  --global-card-bg-color: #ffffff;
+  --studio-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --studio-soft: #f3f3f4;
+  --studio-soft-hover: #e7e7e9;
+
+  body {
+    font-family: var(--studio-sans);
+    font-size: 15.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.005em;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  .container {
+    max-width: 840px;
+  }
+
+  .container.mt-5 {
+    margin-top: 3rem !important;
+  }
+
+  a,
+  table.table a {
+    color: var(--global-text-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: #c9c9cc;
+
+    &:hover {
+      color: var(--global-text-color-light);
+      text-decoration-color: var(--global-text-color-light);
+    }
+  }
+
+  a.keyword {
+    border-bottom: 0;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: #c9c9cc;
+    font-weight: 500;
+
+    &:hover {
+      color: var(--global-text-color-light);
+    }
+  }
+
+  // Navbar: transparent, no border, medium-weight links.
+  .navbar {
+    border-bottom: 0;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .navbar.navbar-light {
+    .navbar-brand {
+      font-family: var(--studio-sans);
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+
+      .font-weight-bold {
+        font-weight: 600 !important;
+      }
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      font-family: var(--studio-sans);
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      color: var(--global-text-color-light);
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      &:hover {
+        color: var(--global-text-color);
+      }
+    }
+
+    .navbar-nav .nav-item.active > .nav-link {
+      font-weight: 500;
+      color: var(--global-text-color);
+    }
+  }
+
+  // Header: big tight headline.
+  .post-title {
+    font-family: var(--studio-sans);
+    font-weight: 600;
+    font-size: 2.25rem;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 0.75rem;
+
+    .font-weight-bold {
+      font-weight: 600 !important;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1.9rem;
+    }
+  }
+
+  .post-description {
+    font-size: 0.95rem;
+    color: var(--global-text-color-light);
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-family: var(--studio-sans);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--global-text-color);
+    margin-top: 2.75rem !important;
+    margin-bottom: 0.9rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  // Profile: soft radius, no shadow, airy icons.
+  .profile {
+    img {
+      box-shadow: none !important;
+      border-radius: 14px !important;
+    }
+
+    figure {
+      margin-bottom: 0.9rem;
+    }
+
+    // Icons span exactly the photo width: first flush left, last flush right.
+    // On phones the row is constrained to the (centred) photo width so it still lines up.
+    .social {
+      @media (max-width: 576px) {
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .social .contact-icons {
+      justify-content: space-between;
+      gap: 0;
+      padding: 0 0.1rem;
+
+      @media (max-width: 576px) {
+        justify-content: space-between;
+        gap: 0;
+        flex-wrap: nowrap;
+
+        a {
+          padding: 0;
+          font-size: 1rem;
+        }
+      }
+
+      a {
+        padding: 0;
+        text-decoration: none;
+        line-height: 1;
+
+        i {
+          font-size: 1.05rem;
+          color: var(--global-text-color-light);
+          transition: color 0.15s ease;
+        }
+
+        .social-label {
+          display: none;
+        }
+
+        &:hover {
+          background: transparent;
+
+          i {
+            color: var(--global-text-color);
+          }
+        }
+      }
+    }
+  }
+
+  .profile.float-right {
+    margin-left: 2rem;
+
+    @media (max-width: 576px) {
+      margin-left: auto;
+    }
+  }
+
+  // Phones: a larger portrait than the base theme's 180px, icons scaled with it
+  // (1.05rem on the ~200px desktop photo -> 1.3rem on 250px). Declared after the
+  // desktop icon rule so it wins at equal specificity.
+  @media (max-width: 576px) {
+    .profile.float-left figure,
+    .profile.float-right figure {
+      max-width: 250px;
+    }
+
+    .profile .social .contact-icons a i {
+      font-size: 1.3rem;
+    }
+  }
+
+  // News: spacious rows, no borders.
+  .news table.table {
+    th,
+    td {
+      padding: 0.4rem 0;
+      border: 0;
+      font-size: 0.92rem;
+      vertical-align: baseline;
+      line-height: 1.55;
+    }
+
+    th {
+      font-weight: 500;
+      color: var(--global-text-color-light);
+      white-space: nowrap;
+      padding-right: 1.5rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  // Publications
+  .publications {
+    margin-top: 1rem;
+
+    h2.bibliography {
+      font-family: var(--studio-sans);
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      text-align: left;
+      color: #c9c9cc;
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 2.25rem !important;
+      margin-bottom: 0.5rem;
+    }
+
+    ol.bibliography li {
+      margin-bottom: 0;
+      padding: 1.15rem 0;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      video.preview,
+      img.preview {
+        box-shadow: none !important;
+        border-radius: 10px !important;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: -0.015em;
+        line-height: 1.35;
+        margin-bottom: 0.25rem;
+      }
+
+      .author {
+        font-size: 0.88rem;
+        color: var(--global-text-color-light);
+        line-height: 1.55;
+
+        a {
+          border-bottom: 0;
+          color: var(--global-text-color-light);
+          text-decoration: none;
+
+          &:hover {
+            color: var(--global-text-color);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+          }
+        }
+
+        strong u {
+          text-decoration: none;
+          color: var(--global-text-color);
+          font-weight: 500;
+        }
+
+        > span.more-authors {
+          border-bottom: 0;
+          text-decoration: underline dotted;
+        }
+      }
+
+      .periodical {
+        font-size: 0.88rem;
+        color: var(--global-text-color-light);
+        margin-top: 0.1rem;
+
+        em {
+          font-style: normal;
+          color: var(--global-text-color-light);
+        }
+      }
+
+      .award {
+        background: var(--global-text-color) !important;
+        color: #fff !important;
+        border-radius: 999px;
+        padding: 0.05rem 0.55rem;
+        margin-left: 0.5rem;
+        font-size: 0.72em;
+        font-weight: 500 !important;
+        letter-spacing: 0;
+
+        &.oral,
+        &.spotlight,
+        &.workshop {
+          background: var(--global-text-color) !important;
+        }
+      }
+
+      .links {
+        margin-top: 0.55rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+
+        a.btn,
+        .btn-with-count a.btn {
+          font-family: var(--studio-sans);
+          font-weight: 500;
+          font-size: 0.74rem;
+          letter-spacing: -0.005em;
+          text-transform: none;
+          border: 0;
+          border-radius: 999px;
+          padding: 0.25rem 0.7rem !important;
+          margin: 0;
+          box-shadow: none !important;
+          background: var(--studio-soft);
+          color: var(--global-text-color);
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          transition: background 0.15s ease;
+
+          i {
+            margin: 0;
+            font-size: 0.85em;
+            color: var(--global-text-color-light);
+          }
+
+          &:hover {
+            background: var(--studio-soft-hover);
+            color: var(--global-text-color);
+
+            i {
+              color: var(--global-text-color);
+            }
+          }
+        }
+
+        .btn-with-count {
+          .count-badge {
+            background: transparent !important;
+            color: var(--global-text-color-light);
+            padding: 0;
+            border-radius: 0;
+            font-size: 0.72rem;
+            font-weight: 500;
+            line-height: 1;
+            gap: 0.25em;
+
+            i {
+              margin: 0;
+              font-size: 0.8em;
+              line-height: 1;
+              color: inherit;
+            }
+          }
+
+          &:hover .count-badge {
+            background: transparent !important;
+            color: var(--global-text-color);
+          }
+        }
+      }
+
+      div.abstract.hidden.open {
+        border: 0;
+        background: var(--studio-soft);
+        border-radius: 10px;
+        margin-top: 0.75rem;
+
+        p {
+          text-align: left;
+          font-size: 0.92rem;
+        }
+      }
+    }
+  }
+
+  .publication-filters {
+    gap: 0.4rem !important;
+
+    .filter-btn {
+      font-family: var(--studio-sans);
+      font-weight: 500;
+      font-size: 0.76rem;
+      border-radius: 999px !important;
+      border: 0 !important;
+      padding: 0.3rem 0.75rem;
+      background: var(--studio-soft) !important;
+      color: var(--global-text-color);
+
+      &:hover {
+        background: var(--studio-soft-hover) !important;
+        color: var(--global-text-color);
+      }
+
+      &.active {
+        background: var(--global-text-color) !important;
+        color: #fff;
+      }
+    }
+  }
+
+  // ---- Publications view toggle (compact | detailed) -------------------------
+  .pub-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-header .title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .post-title {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .post-header .title-row + .post-description {
+    margin-top: 0.5rem;
+  }
+
+  // Phones: header left-aligned (the base theme centres it); the toggle stays on the
+  // title line, slightly smaller so both fit comfortably.
+  @media (max-width: 576px) {
+    .post-header:has(.title-row) {
+      text-align: left;
+
+      .title-row {
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .post-title {
+        text-align: left;
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .pub-view-toggle button {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.55rem;
+      }
+    }
+  }
+
+  .pub-view-toggle {
+    display: inline-flex;
+    flex: 0 0 auto;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    padding: 2px;
+    margin-left: auto;
+
+    button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      font-family: var(--studio-sans);
+      font-weight: 500;
+      font-size: 0.74rem;
+      color: var(--global-text-color-light);
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      cursor: pointer;
+      line-height: 1.3;
+
+      &:hover {
+        color: var(--global-text-color);
+      }
+
+      &.active {
+        background: var(--global-text-color);
+        color: #fff;
+      }
+    }
+  }
+
+  // ---- Compact publications view: one row per paper, click to expand --------
+  .publications.view-compact {
+    h2.bibliography {
+      margin-bottom: 0.25rem;
+    }
+
+    ol.bibliography li {
+      padding: 0;
+
+      > .row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        column-gap: 1.25rem;
+        row-gap: 0;
+        align-items: baseline;
+        margin: 0;
+        padding: 0.7rem 0;
+        cursor: pointer;
+      }
+
+      .col-sm-8,
+      .col-sm-10 {
+        display: contents;
+      }
+
+      .col-sm-4.preview,
+      .col-sm-4.abbr {
+        display: none;
+        padding: 0;
+        max-width: 100%;
+        flex: none;
+      }
+
+      .title {
+        grid-column: 1;
+        grid-row: 1;
+        font-weight: 500;
+        font-size: 0.95rem;
+        letter-spacing: -0.01em;
+        line-height: 1.4;
+        margin: 0;
+        display: flex;
+        gap: 0.7rem;
+        align-items: baseline;
+
+        &::before {
+          content: "+";
+          font-family: var(--studio-sans);
+          font-weight: 400;
+          font-size: 0.95rem;
+          color: #b9babf;
+          flex: 0 0 0.7rem;
+        }
+      }
+
+      .author + .periodical {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+        white-space: nowrap;
+        text-align: right;
+        font-size: 0.8rem;
+      }
+
+      .periodical:empty {
+        display: none;
+      }
+
+      .award {
+        font-size: 0.8em;
+        padding: 0 0.5rem;
+      }
+
+      .author,
+      .links,
+      .badges,
+      .periodical + .periodical {
+        display: none;
+      }
+
+      .hidden {
+        grid-column: 1 / -1;
+      }
+
+      > .row:hover .title::before {
+        color: var(--global-text-color);
+      }
+
+      &.expanded {
+        > .row {
+          grid-template-columns: 222px minmax(0, 1fr) auto; // 200px thumbnail + 1.4rem indent
+          cursor: default;
+          padding-bottom: 1.1rem;
+          row-gap: 0.4rem;
+        }
+
+        .title {
+          grid-column: 1 / 3;
+          cursor: pointer;
+
+          &::before {
+            content: "\2212";
+          }
+        }
+
+        .author + .periodical {
+          grid-column: 3;
+        }
+
+        .col-sm-4.preview {
+          display: block;
+          grid-column: 1;
+          grid-row: 2 / span 4;
+          align-self: start;
+          width: auto; // base sets 100%; auto lets the indent margin shrink it inside the column
+          margin: 0.2rem 0 0 1.4rem;
+
+          video.preview,
+          img.preview {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+          }
+        }
+
+        .author,
+        .links,
+        .badges:not(:empty),
+        .periodical + .periodical:not(:empty) {
+          grid-column: 2 / -1;
+          align-self: start;
+        }
+
+        .author {
+          display: block;
+          margin: 0;
+        }
+
+        .periodical + .periodical:not(:empty) {
+          display: block;
+        }
+
+        .links {
+          display: flex;
+          margin-top: 0.2rem;
+        }
+
+        .badges:not(:empty) {
+          display: block;
+        }
+      }
+
+      @media (max-width: 576px) {
+        > .row,
+        &.expanded > .row {
+          grid-template-columns: 1fr;
+        }
+
+        .author + .periodical,
+        &.expanded .author + .periodical {
+          grid-column: 1;
+          grid-row: 2;
+          text-align: left;
+          margin-left: 1.4rem;
+          white-space: normal;
+        }
+
+        &.expanded .title {
+          grid-column: 1;
+        }
+
+        &.expanded .col-sm-4.preview {
+          grid-column: 1;
+          grid-row: 3;
+          max-width: 320px;
+        }
+
+        &.expanded .author,
+        &.expanded .links,
+        &.expanded .badges:not(:empty),
+        &.expanded .periodical + .periodical:not(:empty) {
+          grid-column: 1;
+          margin-left: 1.4rem;
+        }
+      }
+    }
+  }
+
+  // ---- Portrait effects (assets/js/fx.js): depth parallax + tilt ------------
+  .profile figure {
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .fx-depth-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  pre,
+  code {
+    font-size: 0.85em;
+    color: var(--global-text-color);
+    background: var(--studio-soft);
+  }
+
+  progress,
+  .progress-container {
+    display: none;
+  }
+}

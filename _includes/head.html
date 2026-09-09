@@ -12,6 +12,10 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    {% if site.site_style == "studio" -%}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    {%- endif %}
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}" media="" id="highlight_theme_light" />
@@ -29,6 +33,11 @@
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+    {% if site.site_style == "studio" -%}
+    <!-- Portrait effects: depth parallax + tilt (assets/js/fx.js) -->
+    <script defer src="{{ '/assets/js/fx.js' | relative_url | bust_file_cache }}"></script>
+    {%- endif %}
 
     <!-- Dark Mode -->
     {% if site.enable_darkmode %}
