@@ -61,6 +61,8 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?19f3075a2d19613090fe9e16b564e1fe" media="" id="highlight_theme_light">
@@ -73,6 +75,9 @@
     
     <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
     <link rel="canonical" href="/publications/">
+
+    <!-- Portrait effects: depth parallax + tilt (assets/js/fx.js) -->
+    <script defer src="/assets/js/fx.js?ccb8a5959c68f45cb1944635793eaec5"></script>
 
     <!-- Dark Mode -->
     
@@ -141,17 +146,22 @@
 
   <article>
     <!-- _pages/publications.md -->
-<div class="publication-filters" style="margin-bottom: 1.5rem;">
+<div class="pub-toolbar">
+<div class="publication-filters">
   <button class="filter-btn active" data-filter="all">All</button>
   <button class="filter-btn" data-filter="3d-reconstruction">3D Reconstruction</button>
   <button class="filter-btn" data-filter="neural-representations">Neural Representations</button>
   <button class="filter-btn" data-filter="generative-modeling">Generative Modeling</button>
   <button class="filter-btn" data-filter="world-models">World Models</button>
-  <button class="filter-btn" data-filter="pose-estimation">Pose Estimation</button>
   <button class="filter-btn" data-filter="sim2real">Sim2Real</button>
 </div>
+<div class="pub-view-toggle" role="group" aria-label="Publication view">
+  <button type="button" data-view="compact" class="active">Compact</button>
+  <button type="button" data-view="detailed">Detailed</button>
+</div>
+</div>
 
-<div class="publications">
+<div class="publications view-compact">
 
 <h2 class="bibliography">2026</h2>
 <ol class="bibliography">
@@ -187,10 +197,10 @@
             <a href="https://arxiv.org/abs/2606.09056" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
             <a href="https://davidcharatan.com/millivid" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span><span class="btn-text-mobile">WEB</span></a>
             <span class="btn-with-count">
-              <a href="https://github.com/dcharatan/millivid" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="dcharatan/millivid"><i class="fa-solid fa-star"></i> 107</span></a>
+              <a href="https://github.com/dcharatan/millivid" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="dcharatan/millivid"><i class="fa-solid fa-star"></i> 110</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=MilliVid%3A+Hierarchical+Latents+for+Long-Range+Consistency+in+Video+Generation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"></span></a>
+            <a href="https://scholar.google.com/scholar?q=MilliVid%3A+Hierarchical+Latents+for+Long-Range+Consistency+in+Video+Generation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 1</span></a>
           </span>
           </div>
           
@@ -237,7 +247,7 @@
               <a href="https://github.com/TRI-ML/recgen" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="TRI-ML/recgen"><i class="fa-solid fa-star"></i> 206</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=RecGen%3A+3D+Multi-Object+Scene+Reconstruction+from+Sparse+Observations" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 2</span></a>
+            <a href="https://scholar.google.com/scholar?q=RecGen%3A+3D+Multi-Object+Scene+Reconstruction+from+Sparse+Observations" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 4</span></a>
           </span>
           </div>
           
@@ -325,10 +335,10 @@
             <a href="https://arxiv.org/abs/2602.09153" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
             <a href="https://scenesmith.github.io/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span><span class="btn-text-mobile">WEB</span></a>
             <span class="btn-with-count">
-              <a href="https://github.com/nepfaff/scenesmith" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="nepfaff/scenesmith"><i class="fa-solid fa-star"></i> 580</span></a>
+              <a href="https://github.com/nepfaff/scenesmith" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="nepfaff/scenesmith"><i class="fa-solid fa-star"></i> 583</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=SceneSmith%3A+Agentic+Generation+of+Simulation-Ready+Indoor+Scenes" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 13</span></a>
+            <a href="https://scholar.google.com/scholar?q=SceneSmith%3A+Agentic+Generation+of+Simulation-Ready+Indoor+Scenes" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 24</span></a>
           </span>
             <a href="https://news.mit.edu/2026/ai-agents-create-virtual-playgrounds-to-help-robots-get-crucial-training-data-0713" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-newspaper"></i><span class="btn-text"> Blog</span><span class="btn-text-mobile">BLOG</span></a>
           </div>
@@ -436,7 +446,7 @@
               <a href="https://github.com/arhanjain/PolaRiS" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="arhanjain/PolaRiS"><i class="fa-solid fa-star"></i> 233</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=PolaRiS%3A+Scalable+Real-to-Sim+Evaluations+for+Generalist+Robot+Policies" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 15</span></a>
+            <a href="https://scholar.google.com/scholar?q=PolaRiS%3A+Scalable+Real-to-Sim+Evaluations+for+Generalist+Robot+Policies" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 19</span></a>
           </span>
           </div>
           
@@ -480,10 +490,10 @@
             <a href="https://arxiv.org/abs/2510.08807" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
             <a href="https://humanoideveryday.github.io/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span><span class="btn-text-mobile">WEB</span></a>
             <span class="btn-with-count">
-              <a href="https://github.com/physical-superintelligence-lab/Humanoid-Everyday" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="physical-superintelligence-lab/Humanoid-Everyday"><i class="fa-solid fa-star"></i> 165</span></a>
+              <a href="https://github.com/physical-superintelligence-lab/Humanoid-Everyday" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="physical-superintelligence-lab/Humanoid-Everyday"><i class="fa-solid fa-star"></i> 166</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Humanoid+Everyday%3A+A+Comprehensive+Robotic+Dataset+for+Open-World+Humanoid+Manipulation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 15</span></a>
+            <a href="https://scholar.google.com/scholar?q=Humanoid+Everyday%3A+A+Comprehensive+Robotic+Dataset+for+Open-World+Humanoid+Manipulation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 22</span></a>
           </span>
           </div>
           
@@ -531,7 +541,7 @@
             <a href="https://arxiv.org/abs/2507.05331" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
             <a href="https://toyotaresearchinstitute.github.io/lbm1/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span><span class="btn-text-mobile">WEB</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=A+Careful+Examination+of+Large+Behavior+Models+for+Multitask+Dexterous+Manipulation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 108</span></a>
+            <a href="https://scholar.google.com/scholar?q=A+Careful+Examination+of+Large+Behavior+Models+for+Multitask+Dexterous+Manipulation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 120</span></a>
           </span>
           </div>
           
@@ -574,7 +584,7 @@
           <div class="links">
             <a href="https://tri-ml.github.io/raiden/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span><span class="btn-text-mobile">WEB</span></a>
             <span class="btn-with-count">
-              <a href="https://github.com/TRI-ML/raiden" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="TRI-ML/raiden"><i class="fa-solid fa-star"></i> 85</span></a>
+              <a href="https://github.com/TRI-ML/raiden" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="TRI-ML/raiden"><i class="fa-solid fa-star"></i> 86</span></a>
             </span>
           <span class="btn-with-count">
             <a href="https://scholar.google.com/scholar?q=RAIDEN%3A+A+Toolkit+for+Policy+Learning+with+YAM+Bimanual+Robot+Arms" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"></span></a>
@@ -644,7 +654,7 @@
               <a href="https://github.com/PointsCoder/OpenReal2Sim" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="PointsCoder/OpenReal2Sim"><i class="fa-solid fa-star"></i> 239</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Robot+Learning+from+Any+Images" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 10</span></a>
+            <a href="https://scholar.google.com/scholar?q=Robot+Learning+from+Any+Images" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 13</span></a>
           </span>
           </div>
           
@@ -691,7 +701,7 @@
               <a href="https://github.com/nepfaff/steerable-scene-generation" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="nepfaff/steerable-scene-generation"><i class="fa-solid fa-star"></i> 88</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Steerable+Scene+Generation+with+Post+Training+and+Inference-Time+Search" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 8</span></a>
+            <a href="https://scholar.google.com/scholar?q=Steerable+Scene+Generation+with+Post+Training+and+Inference-Time+Search" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 10</span></a>
           </span>
             <a href="https://news.mit.edu/2025/using-generative-ai-diversify-virtual-training-grounds-robots-1008" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-newspaper"></i><span class="btn-text"> Blog</span><span class="btn-text-mobile">BLOG</span></a>
           </div>
@@ -743,7 +753,7 @@
               <a href="https://github.com/sh8/ZeroGrasp" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="sh8/ZeroGrasp"><i class="fa-solid fa-star"></i> 96</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=ZeroGrasp%3A+Zero-Shot+Shape+Reconstruction+Enabled+Robotic+Grasping" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 26</span></a>
+            <a href="https://scholar.google.com/scholar?q=ZeroGrasp%3A+Zero-Shot+Shape+Reconstruction+Enabled+Robotic+Grasping" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 31</span></a>
           </span>
           </div>
           
@@ -787,7 +797,7 @@
             <a href="https://arxiv.org/abs/2508.03669" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
             <a href="https://tri-ml.github.io/omnishape/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span><span class="btn-text-mobile">WEB</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=OmniShape%3A+Zero-Shot+Multi-Hypothesis+Object+Pose+and+Shape+Estimation+in+the+Real+World" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 1</span></a>
+            <a href="https://scholar.google.com/scholar?q=OmniShape%3A+Zero-Shot+Multi-Hypothesis+Object+Pose+and+Shape+Estimation+in+the+Real+World" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 2</span></a>
           </span>
           </div>
           
@@ -846,7 +856,7 @@
           <div class="links">
             <a href="https://openreview.net/pdf/e8039c44b88c7c3803572ada21d4746ef0778d7d.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=SE3+Equivariant+Ray+Embeddings+for+Implicit+Multi-View+Depth+Estimation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 10</span></a>
+            <a href="https://scholar.google.com/scholar?q=SE3+Equivariant+Ray+Embeddings+for+Implicit+Multi-View+Depth+Estimation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 11</span></a>
           </span>
           </div>
           
@@ -906,7 +916,7 @@
               <a href="https://github.com/s-tian/VISTA" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="s-tian/VISTA"><i class="fa-solid fa-star"></i> 32</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=View-Invariant+Policy+Learning+via+Zero-Shot+Novel+View+Synthesis" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 49</span></a>
+            <a href="https://scholar.google.com/scholar?q=View-Invariant+Policy+Learning+via+Zero-Shot+Novel+View+Synthesis" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 54</span></a>
           </span>
           </div>
           
@@ -1026,7 +1036,7 @@
               <a href="https://github.com/zubair-irshad/NeRF-MAE" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="zubair-irshad/NeRF-MAE"><i class="fa-solid fa-star"></i> 106</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=NeRF-MAE%3A+Masked+AutoEncoders+for+Self-Supervised+3D+Representation+Learning+for+Neural+Radiance+Fields" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 41</span></a>
+            <a href="https://scholar.google.com/scholar?q=NeRF-MAE%3A+Masked+AutoEncoders+for+Self-Supervised+3D+Representation+Learning+for+Neural+Radiance+Fields" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 45</span></a>
           </span>
           </div>
           
@@ -1086,7 +1096,7 @@
               <a href="https://github.com/woven-planet/DiffusionNOCS" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="woven-planet/DiffusionNOCS"><i class="fa-solid fa-star"></i> 41</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=DiffusionNOCS%3A+Managing+Symmetry+and+Uncertainty+in+Sim2Real+Multi-Modal+Category-level+Pose+Estimation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 33</span></a>
+            <a href="https://scholar.google.com/scholar?q=DiffusionNOCS%3A+Managing+Symmetry+and+Uncertainty+in+Sim2Real+Multi-Modal+Category-level+Pose+Estimation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 35</span></a>
           </span>
           </div>
           
@@ -1250,10 +1260,10 @@
             <a href="https://arxiv.org/pdf/2303.11328.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
             <a href="https://zero123.cs.columbia.edu/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span><span class="btn-text-mobile">WEB</span></a>
             <span class="btn-with-count">
-              <a href="https://github.com/cvlab-columbia/zero123" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="cvlab-columbia/zero123"><i class="fa-solid fa-star"></i> 3058</span></a>
+              <a href="https://github.com/cvlab-columbia/zero123" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="cvlab-columbia/zero123"><i class="fa-solid fa-star"></i> 3059</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Zero-1-to-3%3A+Zero-shot+One+Image+to+3D+Object" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 1844</span></a>
+            <a href="https://scholar.google.com/scholar?q=Zero-1-to-3%3A+Zero-shot+One+Image+to+3D+Object" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 1929</span></a>
           </span>
           </div>
           
@@ -1360,7 +1370,7 @@
               <a href="https://github.com/zubair-irshad/NeO-360" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="zubair-irshad/NeO-360"><i class="fa-solid fa-star"></i> 246</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=NeO+360%3A+Neural+Fields+for+Sparse+View+Synthesis+of+Outdoor+Scenes" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 69</span></a>
+            <a href="https://scholar.google.com/scholar?q=NeO+360%3A+Neural+Fields+for+Sparse+View+Synthesis+of+Outdoor+Scenes" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 72</span></a>
           </span>
           </div>
           
@@ -1508,7 +1518,7 @@
             <a href="https://prafullsharma.net/neural_groundplans/neural_groundplans_camera_ready.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
             <a href="https://prafullsharma.net/neural_groundplans/index.html" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-globe"></i><span class="btn-text"> Website</span><span class="btn-text-mobile">WEB</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Neural+Groundplans%3A+Persistent+Neural+Scene+Representations+from+a+Single+Image" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 34</span></a>
+            <a href="https://scholar.google.com/scholar?q=Neural+Groundplans%3A+Persistent+Neural+Scene+Representations+from+a+Single+Image" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 35</span></a>
           </span>
           </div>
           
@@ -1558,7 +1568,7 @@
               <a href="https://github.com/TRI-ML/road" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="TRI-ML/road"><i class="fa-solid fa-star"></i> 15</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=ROAD%3A+Learning+an+Implicit+Recursive+Octree+Auto-Decoder+to+Efficiently+Encode+3D+Shapes" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 7</span></a>
+            <a href="https://scholar.google.com/scholar?q=ROAD%3A+Learning+an+Implicit+Recursive+Octree+Auto-Decoder+to+Efficiently+Encode+3D+Shapes" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 8</span></a>
           </span>
           </div>
           
@@ -1601,7 +1611,7 @@
           <div class="links">
             <a href="https://arxiv.org/pdf/2210.12682.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Photo-realistic+Neural+Domain+Randomization" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 19</span></a>
+            <a href="https://scholar.google.com/scholar?q=Photo-realistic+Neural+Domain+Randomization" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 20</span></a>
           </span>
           </div>
           
@@ -1708,7 +1718,7 @@
               <a href="https://github.com/zubair-irshad/shapo" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="zubair-irshad/shapo"><i class="fa-solid fa-star"></i> 198</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=ShAPO%3A+Implicit+Representations+for+Multi+Object+Shape+Appearance+and+Pose+Optimization" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 100</span></a>
+            <a href="https://scholar.google.com/scholar?q=ShAPO%3A+Implicit+Representations+for+Multi+Object+Shape+Appearance+and+Pose+Optimization" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 104</span></a>
           </span>
           </div>
           
@@ -1755,7 +1765,7 @@
               <a href="https://github.com/TRI-ML/vidar" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="TRI-ML/vidar"><i class="fa-solid fa-star"></i> 637</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Multi-Frame+Self-Supervised+Depth+with+Transformers" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 145</span></a>
+            <a href="https://scholar.google.com/scholar?q=Multi-Frame+Self-Supervised+Depth+with+Transformers" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 149</span></a>
           </span>
           </div>
           
@@ -1814,7 +1824,7 @@
           <div class="links">
             <a href="https://ieeexplore.ieee.org/document/9565319" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=DPODv2%3A+Dense+Correspondence-Based+6+DoF+Pose+Estimation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 87</span></a>
+            <a href="https://scholar.google.com/scholar?q=DPODv2%3A+Dense+Correspondence-Based+6+DoF+Pose+Estimation" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 85</span></a>
           </span>
           </div>
           
@@ -1870,7 +1880,7 @@
           <div class="links">
             <a href="https://openreview.net/pdf?id=CGn3XKSf7vf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Single-Shot+Scene+Reconstruction" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 19</span></a>
+            <a href="https://scholar.google.com/scholar?q=Single-Shot+Scene+Reconstruction" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"></span></a>
           </span>
           </div>
           
@@ -1975,7 +1985,7 @@
               <a href="https://github.com/TRI-ML/sdflabel" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="TRI-ML/sdflabel"><i class="fa-solid fa-star"></i> 163</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Autolabeling+3D+Objects+with+Differentiable+Rendering+of+SDF+Shape+Priors" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 145</span></a>
+            <a href="https://scholar.google.com/scholar?q=Autolabeling+3D+Objects+with+Differentiable+Rendering+of+SDF+Shape+Priors" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 149</span></a>
           </span>
             <a href="https://medium.com/toyotaresearch/scaling-up-synthetic-supervision-for-computer-vision-902689d16216" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-newspaper"></i><span class="btn-text"> Blog</span><span class="btn-text-mobile">BLOG</span></a>
           </div>
@@ -2032,7 +2042,7 @@
           <div class="links">
             <a href="http://campar.in.tum.de/pub/kaskman2020eccvw/kaskman2020eccvw.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=6+dof+pose+estimation+of+textureless+objects+from+multiple+RGB+frames" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 16</span></a>
+            <a href="https://scholar.google.com/scholar?q=6+dof+pose+estimation+of+textureless+objects+from+multiple+RGB+frames" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 17</span></a>
           </span>
           </div>
           
@@ -2081,7 +2091,7 @@
               <a href="https://github.com/zakharos/DPOD" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="zakharos/DPOD"><i class="fa-solid fa-star"></i> 58</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=DPOD%3A+6D+Pose+Object+Detector+and+Refiner" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 712</span></a>
+            <a href="https://scholar.google.com/scholar?q=DPOD%3A+6D+Pose+Object+Detector+and+Refiner" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 721</span></a>
           </span>
           </div>
           
@@ -2137,7 +2147,7 @@
           <div class="links">
             <a href="https://arxiv.org/pdf/1904.02750.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=DeceptionNet%3A+Network-Driven+Domain+Randomization" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 116</span></a>
+            <a href="https://scholar.google.com/scholar?q=DeceptionNet%3A+Network-Driven+Domain+Randomization" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 117</span></a>
           </span>
           </div>
           
@@ -2193,7 +2203,7 @@
           <div class="links">
             <a href="https://arxiv.org/pdf/1810.04158.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Seeing+beyond+appearance-mapping+real+images+into+geometrical+domains+for+unsupervised+cad-based+recognition" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 14</span></a>
+            <a href="https://scholar.google.com/scholar?q=Seeing+beyond+appearance-mapping+real+images+into+geometrical+domains+for+unsupervised+cad-based+recognition" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 16</span></a>
           </span>
           </div>
           
@@ -2253,7 +2263,7 @@
               <a href="https://github.com/ilics/homebrewdb" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i><span class="btn-text"> Code</span><span class="btn-text-mobile">CODE</span><span class="count-badge github-stars-count" data-repo="ilics/homebrewdb"><i class="fa-solid fa-star"></i> 29</span></a>
             </span>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=HomebrewedDB%3A+RGB-D+Dataset+for+6D+Pose+Estimation+of+3D+Objects" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 216</span></a>
+            <a href="https://scholar.google.com/scholar?q=HomebrewedDB%3A+RGB-D+Dataset+for+6D+Pose+Estimation+of+3D+Objects" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 235</span></a>
           </span>
           </div>
           
@@ -2414,7 +2424,7 @@
           <div class="links">
             <a href="https://arxiv.org/pdf/1904.04854.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=3D+Object+Instance+Recognition+and+Pose+Estimation+Using+Triplet+Loss+with+Dynamic+Margin" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 52</span></a>
+            <a href="https://scholar.google.com/scholar?q=3D+Object+Instance+Recognition+and+Pose+Estimation+Using+Triplet+Loss+with+Dynamic+Margin" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 53</span></a>
           </span>
           </div>
           
@@ -2474,7 +2484,7 @@
           <div class="links">
             <a href="https://arxiv.org/pdf/1702.08558.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-pdf"></i><span class="btn-text"> Paper</span><span class="btn-text-mobile">PDF</span></a>
           <span class="btn-with-count">
-            <a href="https://scholar.google.com/scholar?q=Depthsynth%3A+Real-time+realistic+synthetic+data+generation+from+cad+models+for+2.5+d+recognition" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 113</span></a>
+            <a href="https://scholar.google.com/scholar?q=Depthsynth%3A+Real-time+realistic+synthetic+data+generation+from+cad+models+for+2.5+d+recognition" class="btn btn-sm z-depth-0 cite-btn" role="button" target="_blank" rel="external nofollow noopener"><i class="ai ai-google-scholar"></i><span class="btn-text"> Cite</span><span class="btn-text-mobile">CITE</span> <span class="count-badge cite-count"><i class="fa-solid fa-quote-left"></i> 114</span></a>
           </span>
           </div>
           
@@ -2528,6 +2538,42 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const formatCount = (n) => n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n);
+
+  // Compact / detailed view (persisted). Compact shows one row per paper; click a row to expand it.
+  const pubs = document.querySelector('.publications');
+  const viewBtns = document.querySelectorAll('.pub-view-toggle button');
+  // Place the toggle on the title line of the page header.
+  const toggle = document.querySelector('.pub-view-toggle');
+  const titleEl = document.querySelector('.post-header .post-title');
+  if (toggle && titleEl) {
+    const row = document.createElement('div');
+    row.className = 'title-row';
+    titleEl.parentNode.insertBefore(row, titleEl);
+    row.appendChild(titleEl);
+    row.appendChild(toggle);
+  }
+  function applyView(view) {
+    pubs.classList.toggle('view-compact', view === 'compact');
+    pubs.classList.toggle('view-detailed', view === 'detailed');
+    viewBtns.forEach(b => b.classList.toggle('active', b.dataset.view === view));
+    if (view === 'detailed') pubs.querySelectorAll('li.expanded').forEach(li => li.classList.remove('expanded'));
+  }
+  let savedView = null;
+  try { savedView = localStorage.getItem('pubs-view'); } catch (e) {}
+  applyView(savedView === 'detailed' ? 'detailed' : 'compact');
+  viewBtns.forEach(b => b.addEventListener('click', () => {
+    applyView(b.dataset.view);
+    try { localStorage.setItem('pubs-view', b.dataset.view); } catch (e) {}
+  }));
+  pubs.addEventListener('click', function(ev) {
+    if (!pubs.classList.contains('view-compact')) return;
+    const li = ev.target.closest('ol.bibliography li');
+    if (!li) return;
+    const onTitle = ev.target.closest('.title');
+    if (li.classList.contains('expanded') && !onTitle) return;
+    if (ev.target.closest('a, button, .links, .hidden, .author, .badges, video, img')) return;
+    li.classList.toggle('expanded');
+  });
 
   // Publication filtering (single select)
   const filterBtns = document.querySelectorAll('.filter-btn');
