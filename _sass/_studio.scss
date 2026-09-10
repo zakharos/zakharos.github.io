@@ -588,13 +588,23 @@
         }
       }
 
+      // Venue cell: venue flush right, award badge (if any) to its left, so venues
+      // line up across rows whether or not a badge is present.
       .author + .periodical {
         grid-column: 2;
         grid-row: 1;
         margin: 0;
         white-space: nowrap;
-        text-align: right;
         font-size: 0.8rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+
+        .award {
+          margin-left: 0;
+        }
       }
 
       .periodical:empty {
@@ -696,7 +706,8 @@
         &.expanded .author + .periodical {
           grid-column: 1;
           grid-row: 2;
-          text-align: left;
+          flex-direction: row;
+          justify-content: flex-start;
           margin-left: 1.4rem;
           white-space: normal;
         }
