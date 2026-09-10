@@ -175,7 +175,7 @@ collections:
 
 announcements:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  scrollable: false # no inner scrollbox; the list is already capped by "limit" below
   limit: 4 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
