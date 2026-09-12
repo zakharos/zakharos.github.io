@@ -24,7 +24,8 @@
     "TRI-ML/sdflabel": 163,
     "zubair-irshad/NeRF-MAE": 106,
     "TRI-ML/recgen": 212,
-    "zubair-irshad/NeO-360": 246
+    "zubair-irshad/NeO-360": 246,
+    "cgumbsch/Demo2Reward": 0
   },
   "citations": {
     "zero-1-to-3: zero-shot one image to 3d object": 1934,
