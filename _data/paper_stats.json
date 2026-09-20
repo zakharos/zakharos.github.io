@@ -4,18 +4,18 @@
     "TRI-ML/road": 15,
     "ilics/homebrewdb": 29,
     "zakharos/DPOD": 58,
-    "cvlab-columbia/zero123": 3060,
+    "cvlab-columbia/zero123": 3063,
     "s-tian/VISTA": 32,
     "TRI-ML/OctMAE": 32,
     "PointsCoder/OpenReal2Sim": 239,
     "sh8/ZeroGrasp": 97,
-    "physical-superintelligence-lab/Humanoid-Everyday": 166,
+    "physical-superintelligence-lab/Humanoid-Everyday": 169,
     "dcharatan/millivid": 110,
     "nepfaff/steerable-scene-generation": 88,
     "coltonstearns/SpOT": 30,
     "arhanjain/PolaRiS": 234,
     "TRI-ML/vidar": 637,
-    "nepfaff/scenesmith": 585,
+    "nepfaff/scenesmith": 599,
     "TRI-ML/refine": 7,
     "robot-learning-freiburg/CARTO": 25,
     "tri-ml/vidar": 637,
@@ -23,7 +23,7 @@
     "woven-planet/DiffusionNOCS": 41,
     "TRI-ML/sdflabel": 163,
     "zubair-irshad/NeRF-MAE": 106,
-    "TRI-ML/recgen": 212,
+    "TRI-ML/recgen": 214,
     "zubair-irshad/NeO-360": 246,
     "cgumbsch/Demo2Reward": 0
   },
@@ -74,5 +74,5 @@
     "millivid: hierarchical latents for long-range consistency in video generation": 1,
     "from demonstrations to rewards: test-time prompt optimization for vlm reward models": 0
   },
-  "updated": "2026-09-13T02:06:57.410Z"
+  "updated": "2026-09-20T02:24:59.179Z"
 }
