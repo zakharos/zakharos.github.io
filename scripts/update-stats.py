@@ -24,7 +24,7 @@ def fetch_citations():
     citations = {}
     for pub in author.get("publications", []):
         filled_pub = scholarly.fill(pub)
-        title = filled_pub.get("bib", {}).get("title", "").lower().strip().rstrip(".").strip()
+        title = filled_pub.get("bib", {}).get("title", "").lower().strip()
         num_citations = filled_pub.get("num_citations", 0)
         if title:
             citations[title] = num_citations
