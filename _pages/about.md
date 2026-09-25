@@ -23,4 +23,4 @@ I am a Senior Research Scientist and Technical Lead at [Toyota Research Institut
 
 My research spans <a href="/publications/#3d-reconstruction" class="keyword">3D reconstruction</a>, <a href="/publications/#generative-modeling" class="keyword">generative modeling</a>, <a href="/publications/#neural-representations" class="keyword">neural representations</a>, <a href="/publications/#world-models" class="keyword">world models</a>, and <a href="/publications/#sim2real" class="keyword">sim-to-real</a>, with a strong focus on generalization and real-world transfer across robotics and autonomous driving.
 
-I earned my PhD from the [Technical University of Munich](https://www.tum.de/en/) under [Slobodan Ilic](https://campar.in.tum.de/Main/SlobodanIlic).
+I earned my PhD from the [Technical University of Munich](https://www.tum.de/en/) under [Slobodan Ilic](https://scholar.google.com/citations?user=ELOVd8sAAAAJ&hl=en).
