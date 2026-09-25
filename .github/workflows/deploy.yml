@@ -14,6 +14,11 @@ on:
 permissions:
   contents: write
 
+# Serialize deploys so a slow older run cannot overwrite a newer one.
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
