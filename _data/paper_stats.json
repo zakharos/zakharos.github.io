@@ -55,7 +55,7 @@
     "fsd: fast self-supervised single rgb-d to categorical 3d objects": 22,
     "photo-realistic neural domain randomization": 20,
     "polaris: scalable real-to-sim evaluations for generalist robot policies": 19,
-    "single-shot scene reconstruction.": 19,
+    "single-shot scene reconstruction": 19,
     "spot: spatiotemporal modeling for 3d object tracking": 18,
     "multi-object manipulation via object-centric neural scattering functions": 17,
     "6 dof pose estimation of textureless objects from multiple rgb frames": 17,
