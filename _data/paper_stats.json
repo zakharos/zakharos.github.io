@@ -1,26 +1,26 @@
 {
   "github": {
-    "s-tian/VISTA": 32,
+    "s-tian/VISTA": 33,
     "coltonstearns/SpOT": 30,
     "TRI-ML/road": 15,
-    "cvlab-columbia/zero123": 3067,
+    "cvlab-columbia/zero123": 3068,
     "zubair-irshad/NeRF-MAE": 107,
-    "TRI-ML/recgen": 219,
-    "arhanjain/PolaRiS": 238,
+    "TRI-ML/recgen": 224,
+    "arhanjain/PolaRiS": 241,
     "TRI-ML/refine": 7,
-    "cameronosmith/bind": 7,
+    "cameronosmith/bind": 10,
     "TRI-ML/OctMAE": 33,
     "xiaochy/H2RBench": 3,
-    "TRI-ML/raiden": 89,
-    "physical-superintelligence-lab/Humanoid-Everyday": 170,
+    "TRI-ML/raiden": 90,
+    "physical-superintelligence-lab/Humanoid-Everyday": 172,
     "sh8/ZeroGrasp": 98,
     "zubair-irshad/shapo": 197,
     "zubair-irshad/NeO-360": 246,
     "zakharos/DPOD": 58,
     "woven-planet/DiffusionNOCS": 41,
     "ilics/homebrewdb": 29,
-    "nepfaff/scenesmith": 615,
-    "dcharatan/millivid": 115,
+    "nepfaff/scenesmith": 627,
+    "dcharatan/millivid": 117,
     "tri-ml/vidar": 637,
     "cgumbsch/Demo2Reward": 0,
     "TRI-ML/sdflabel": 163,
@@ -76,5 +76,5 @@
     "from demonstrations to rewards: test-time prompt optimization for vlm reward models": 1,
     "bind: binding 3d robot actions to 2d image features": 0
   },
-  "updated": "2026-10-12T00:55:28Z"
+  "updated": "2026-10-18T02:09:24.587Z"
 }
