@@ -5,28 +5,28 @@
     "TRI-ML/road": 15,
     "cvlab-columbia/zero123": 3067,
     "zubair-irshad/NeRF-MAE": 106,
-    "TRI-ML/recgen": 224,
-    "arhanjain/PolaRiS": 243,
+    "TRI-ML/recgen": 225,
+    "arhanjain/PolaRiS": 244,
     "TRI-ML/refine": 7,
     "cameronosmith/bind": 10,
     "TRI-ML/OctMAE": 33,
-    "xiaochy/H2RBench": 4,
-    "TRI-ML/raiden": 91,
+    "xiaochy/H2RBench": 5,
+    "TRI-ML/raiden": 92,
     "physical-superintelligence-lab/Humanoid-Everyday": 173,
-    "sh8/ZeroGrasp": 98,
+    "sh8/ZeroGrasp": 100,
     "zubair-irshad/shapo": 197,
     "zubair-irshad/NeO-360": 247,
     "zakharos/DPOD": 58,
     "woven-planet/DiffusionNOCS": 41,
     "ilics/homebrewdb": 29,
-    "nepfaff/scenesmith": 639,
+    "nepfaff/scenesmith": 645,
     "dcharatan/millivid": 118,
-    "tri-ml/vidar": 638,
+    "tri-ml/vidar": 639,
     "cgumbsch/Demo2Reward": 0,
     "TRI-ML/sdflabel": 163,
     "robot-learning-freiburg/CARTO": 25,
     "PointsCoder/OpenReal2Sim": 243,
-    "TRI-ML/vidar": 638,
+    "TRI-ML/vidar": 639,
     "nepfaff/steerable-scene-generation": 88
   },
   "citations": {
@@ -76,5 +76,5 @@
     "from demonstrations to rewards: test-time prompt optimization for vlm reward models": 1,
     "bind: binding 3d robot actions to 2d image features": 0
   },
-  "updated": "2026-10-25T02:20:21.130Z"
+  "updated": "2026-11-01T03:17:50.064Z"
 }
