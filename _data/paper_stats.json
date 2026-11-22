@@ -12,7 +12,7 @@
     "TRI-ML/OctMAE": 33,
     "xiaochy/H2RBench": 9,
     "TRI-ML/raiden": 93,
-    "physical-superintelligence-lab/Humanoid-Everyday": 173,
+    "physical-superintelligence-lab/Humanoid-Everyday": 174,
     "sh8/ZeroGrasp": 102,
     "zubair-irshad/shapo": 197,
     "zubair-irshad/NeO-360": 247,
@@ -79,5 +79,5 @@
     "h2rbench: a real-to-sim benchmark for evaluating human-to-robot transfer": 0,
     "uniflow: a unified multi-modal policy for robot manipulation": 0
   },
-  "updated": "2026-11-21T22:15:45Z"
+  "updated": "2026-11-22T04:05:01.679Z"
 }
